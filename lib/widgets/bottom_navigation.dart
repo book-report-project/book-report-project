@@ -28,43 +28,46 @@ class _BottomNavigationBarState extends State<BottomNavigationBarWidget> {
   @override
   Widget build(BuildContext context) {
     final brightness = Theme.of(context).brightness;
-    return Card(
-      color: (brightness == Brightness.light)
-          ? const Color.fromARGB(0, 0, 0, 0)
-          : Colors.red,
-      elevation: 0,
-      margin: const EdgeInsets.all(0),
-      child: SafeArea(
-        top: false,
-        bottom: true,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            _NavigationBarItems(
-                index: 0,
-                onTap: handleItemSelected,
-                isSelected: (selectedIndex == 0),
-                lable: '피드',
-                icon: CupertinoIcons.home),
-            _NavigationBarItems(
-                index: 1,
-                onTap: handleItemSelected,
-                isSelected: (selectedIndex == 1),
-                lable: '검색',
-                icon: CupertinoIcons.search),
-            _NavigationBarItems(
-                index: 2,
-                onTap: handleItemSelected,
-                isSelected: (selectedIndex == 2),
-                lable: '독후감 작성',
-                icon: CupertinoIcons.plus_app),
-            _NavigationBarItems(
-                index: 3,
-                onTap: handleItemSelected,
-                isSelected: (selectedIndex == 3),
-                lable: '설정',
-                icon: CupertinoIcons.ellipsis_circle),
-          ],
+    return SizedBox(
+      height: 90.0,
+      child: Card(
+        color: (brightness == Brightness.light)
+            ? const Color.fromARGB(0, 0, 0, 0)
+            : Colors.red,
+        elevation: 0,
+        margin: const EdgeInsets.all(0),
+        child: SafeArea(
+          top: false,
+          bottom: true,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              _NavigationBarItems(
+                  index: 0,
+                  onTap: handleItemSelected,
+                  isSelected: (selectedIndex == 0),
+                  lable: '피드',
+                  icon: CupertinoIcons.home),
+              _NavigationBarItems(
+                  index: 1,
+                  onTap: handleItemSelected,
+                  isSelected: (selectedIndex == 1),
+                  lable: '검색',
+                  icon: CupertinoIcons.search),
+              _NavigationBarItems(
+                  index: 2,
+                  onTap: handleItemSelected,
+                  isSelected: (selectedIndex == 2),
+                  lable: '독후감 작성',
+                  icon: CupertinoIcons.plus_app),
+              _NavigationBarItems(
+                  index: 3,
+                  onTap: handleItemSelected,
+                  isSelected: (selectedIndex == 3),
+                  lable: '설정',
+                  icon: CupertinoIcons.ellipsis_circle),
+            ],
+          ),
         ),
       ),
     );
@@ -102,7 +105,7 @@ class _NavigationBarItems extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
               child: Icon(icon,
-                  size: isSelected ? 24 : 18,
+                  size: isSelected ? 20 : 18,
                   color: isSelected ? AppColors.secondary : null),
             ),
             const SizedBox(height: 10),
