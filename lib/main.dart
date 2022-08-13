@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import 'package:book_report_app/screens/screens.dart';
 import 'package:book_report_app/style/theme.dart';
-import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,6 +16,6 @@ class MyApp extends StatelessWidget {
         // themeMode: ThemeMode.dark,
         themeMode: ThemeMode.light,
         title: '독후감 앱 (가칭)',
-        home: const HomeScreen());
+        home: HomeScreen());
   }
 }
