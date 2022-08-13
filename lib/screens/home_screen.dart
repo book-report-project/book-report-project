@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   final ValueNotifier<int> pageIndex = ValueNotifier(0);
   final ValueNotifier<String> title = ValueNotifier('독후감 sns 앱(가칭)');
 
-  final pages = const [FeedPage()];
+  final pages = const [FeedPage(), SearchPage(), WritePage(), SettingPage()];
 
   void _onNavigationItemSelected(index) {
     title.value = '독후감 sns 앱(가칭)';
@@ -108,13 +108,24 @@ class _BottomNavigationBarState extends State<_BottomNavigationBar> {
                 isSelected: (selectedIndex == 0),
                 lable: '피드',
                 icon: CupertinoIcons.home),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: GlowingActionButton(
-                  color: AppColors.secondary,
-                  icon: CupertinoIcons.add,
-                  onPressed: () {}),
-            ),
+            _NavigationBarItems(
+                index: 1,
+                onTap: handleItemSelected,
+                isSelected: (selectedIndex == 1),
+                lable: '검색',
+                icon: CupertinoIcons.search),
+            _NavigationBarItems(
+                index: 2,
+                onTap: handleItemSelected,
+                isSelected: (selectedIndex == 2),
+                lable: '독후감 작성',
+                icon: CupertinoIcons.plus_app),
+            _NavigationBarItems(
+                index: 3,
+                onTap: handleItemSelected,
+                isSelected: (selectedIndex == 3),
+                lable: '설정',
+                icon: CupertinoIcons.ellipsis_circle),
           ],
         ),
       ),
