@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/style/theme.dart';
 
-class IconBackground extends StatelessWidget {
+class IconBackground extends StatefulWidget {
   const IconBackground({
     Key? key,
     required this.icon,
@@ -13,6 +14,18 @@ class IconBackground extends StatelessWidget {
   final VoidCallback onTap;
 
   @override
+  State<IconBackground> createState() => _IconBackgroundState();
+}
+
+class _IconBackgroundState extends State<IconBackground> {
+  bool isNewData = true;
+  void _handleClicked() {
+    setState(() {
+      isNewData = false;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Material(
       color: Theme.of(context).cardColor,
@@ -20,17 +33,41 @@ class IconBackground extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(6),
         splashColor: Theme.of(context).scaffoldBackgroundColor,
-        onTap: onTap,
+        onTap: () {
+          _handleClicked();
+        },
         child: Padding(
           padding: const EdgeInsets.all(6),
-          child: Icon(
-            icon,
-            size: 18,
+          child: SizedBox(
+            width: 20,
+            height: 20,
+            child: Column(
+              children: [
+                _badge(isNewData),
+                Icon(
+                  widget.icon,
+                  size: 16,
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
+}
+
+Widget _badge(isNewData) {
+  return Padding(
+      padding: const EdgeInsets.only(left: 13.0),
+      child: SizedBox(
+          width: 4,
+          height: 4,
+          child: Icon(
+            CupertinoIcons.circle_fill,
+            size: 4,
+            color: isNewData ? AppColors.secondary : Colors.transparent,
+          )));
 }
 
 class IconBorder extends StatelessWidget {

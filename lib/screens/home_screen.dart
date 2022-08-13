@@ -8,12 +8,11 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
 
   final ValueNotifier<int> pageIndex = ValueNotifier(0);
-  final ValueNotifier<String> title = ValueNotifier('독후감 sns 앱(가칭)');
+  final ValueNotifier<String> title = ValueNotifier('독후감 sns 앱');
 
   final pages = const [FeedPage(), SearchPage(), WritePage(), SettingPage()];
 
   void _onNavigationItemSelected(index) {
-    title.value = '독후감 sns 앱(가칭)';
     pageIndex.value = index;
   }
 
@@ -26,36 +25,46 @@ class HomeScreen extends StatelessWidget {
         iconTheme: Theme.of(context).iconTheme,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: ValueListenableBuilder(
-          valueListenable: title,
-          builder: (BuildContext context, String value, _) {
-            return Text(value,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                ));
-          },
-        ),
-        leading: Align(
-          alignment: Alignment.centerRight,
-          child: IconBackground(
-              icon: CupertinoIcons.bars,
-              onTap: () {
-                print('TODO search');
-              }),
+        leadingWidth: 120,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 25),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: ValueListenableBuilder(
+              valueListenable: title,
+              builder: (BuildContext context, String value, _) {
+                return Text(value,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ));
+              },
+            ),
+          ),
         ),
         actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: IconBackground(
+                  icon: CupertinoIcons.bell,
+                  onTap: () {
+                    print('TODO search');
+                  }),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(right: 25),
             child: Align(
               alignment: Alignment.centerRight,
               child: IconBackground(
-                  icon: Icons.search,
+                  icon: CupertinoIcons.person,
                   onTap: () {
                     print('TODO search');
                   }),
             ),
-          )
+          ),
         ],
       ),
       body: ValueListenableBuilder(
