@@ -107,7 +107,7 @@ class _BottomNavigationBarState extends State<_BottomNavigationBar> {
                 onTap: handleItemSelected,
                 isSelected: (selectedIndex == 0),
                 lable: '피드',
-                icon: CupertinoIcons.bubble_left_bubble_right_fill),
+                icon: CupertinoIcons.home),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: GlowingActionButton(
