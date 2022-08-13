@@ -37,20 +37,26 @@ class HomeScreen extends StatelessWidget {
                 ));
           },
         ),
-        leadingWidth: 54,
         leading: Align(
           alignment: Alignment.centerRight,
           child: IconBackground(
-              icon: Icons.search,
+              icon: CupertinoIcons.bars,
               onTap: () {
                 print('TODO search');
               }),
         ),
         actions: [
-          // Padding(
-          //   padding: const EdgeInsets.only(right: 24.0),
-          //   child: Avatar.small(url: Helpers.randomPictureUrl()),
-          // )
+          Padding(
+            padding: const EdgeInsets.only(right: 25),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: IconBackground(
+                  icon: Icons.search,
+                  onTap: () {
+                    print('TODO search');
+                  }),
+            ),
+          )
         ],
       ),
       body: ValueListenableBuilder(
