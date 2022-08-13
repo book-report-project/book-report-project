@@ -35,6 +35,7 @@ class _IconBackgroundState extends State<IconBackground> {
         splashColor: Theme.of(context).scaffoldBackgroundColor,
         onTap: () {
           _handleClicked();
+          widget.onTap();
         },
         child: Padding(
           padding: const EdgeInsets.all(6),
