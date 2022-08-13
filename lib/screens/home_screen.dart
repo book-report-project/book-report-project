@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/pages/pages.dart';
@@ -21,52 +20,7 @@ class HomeScreen extends StatelessWidget {
     pageIndex.addListener(() {});
 
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: Theme.of(context).iconTheme,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leadingWidth: 120,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 25),
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: ValueListenableBuilder(
-              valueListenable: title,
-              builder: (BuildContext context, String value, _) {
-                return Text(value,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ));
-              },
-            ),
-          ),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: IconBackground(
-                  icon: CupertinoIcons.bell,
-                  onTap: () {
-                    print('TODO search');
-                  }),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 25),
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: IconBackground(
-                  icon: CupertinoIcons.person,
-                  onTap: () {
-                    print('TODO search');
-                  }),
-            ),
-          ),
-        ],
-      ),
+      appBar: const AppBarWidget(),
       body: ValueListenableBuilder(
           valueListenable: pageIndex,
           builder: (BuildContext context, int value, _) {
