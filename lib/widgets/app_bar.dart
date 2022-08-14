@@ -37,9 +37,20 @@ class AppBarWidgetState extends State<AppBarWidget> {
           child: Align(
             alignment: Alignment.centerRight,
             child: IconBackground(
+                icon: CupertinoIcons.mail,
+                onTap: () {
+                  print('Message Clicked');
+                }),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: IconBackground(
                 icon: CupertinoIcons.bell,
                 onTap: () {
-                  print('TODO search');
+                  print('Search Clicked');
                 }),
           ),
         ),
@@ -50,7 +61,7 @@ class AppBarWidgetState extends State<AppBarWidget> {
             child: IconBackground(
                 icon: CupertinoIcons.person,
                 onTap: () {
-                  print('TODO search');
+                  print('User Clicked');
                 }),
           ),
         ),
