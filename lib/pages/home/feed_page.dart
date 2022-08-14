@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/style/theme.dart';
+import 'package:book_report_app/widgets/widgets.dart';
 
 class FeedPage extends StatefulWidget {
   const FeedPage({Key? key}) : super(key: key);
@@ -15,6 +16,8 @@ class FeedPageState extends State<FeedPage> {
     return Column(
       children: [
         _pleaseWriteBookReport(context),
+        const Stories(),
+        // const RecommandFollowing()
       ],
     );
   }
