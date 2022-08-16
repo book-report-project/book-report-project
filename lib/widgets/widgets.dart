@@ -5,3 +5,6 @@ export 'bottom_navigation.dart';
 export 'app_bar.dart';
 export 'stories.dart';
 export 'recommand_following.dart';
+export 'hr.dart';
+export 'book_link.dart';
+export 'feed_widget.dart';

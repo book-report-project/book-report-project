@@ -12,7 +12,7 @@ class Stories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 150,
+      height: 140,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

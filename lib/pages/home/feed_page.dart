@@ -13,12 +13,23 @@ class FeedPage extends StatefulWidget {
 class FeedPageState extends State<FeedPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        _pleaseWriteBookReport(context),
-        const Stories(),
-        // const RecommandFollowing()
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          _pleaseWriteBookReport(context),
+          const Stories(),
+          const SizedBox(height: 30),
+          // const RecommandFollowing()
+          Column(
+            children: const [
+              FeedWidget(),
+              FeedWidget(),
+              FeedWidget(),
+              FeedWidget(),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
