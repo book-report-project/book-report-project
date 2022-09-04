@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:book_report_app/widgets/widgets.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:like_button/like_button.dart';
 
 class FeedWidget extends StatelessWidget {
   const FeedWidget({Key? key}) : super(key: key);
@@ -126,49 +128,34 @@ class FeedWidget extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Row(
-                        children: const [
-                          Icon(
-                            CupertinoIcons.heart,
-                            size: 20,
-                            color: AppColors.secondary,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 8.0),
-                            child:
-                                Text('300', style: TextStyle(fontSize: 12.0)),
-                          )
-                        ],
-                      ),
-                      const SizedBox(width: 10),
-                      Row(
-                        children: const [
-                          Icon(
-                            CupertinoIcons.chat_bubble,
-                            size: 20,
-                            color: AppColors.secondary,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 8.0),
-                            child:
-                                Text('300', style: TextStyle(fontSize: 12.0)),
-                          )
-                        ],
-                      ),
-                      const SizedBox(width: 10),
-                      Row(
-                        children: const [
-                          Icon(
-                            CupertinoIcons.bookmark,
-                            size: 20,
-                            color: AppColors.secondary,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 8.0),
-                            child:
-                                Text('300', style: TextStyle(fontSize: 12.0)),
-                          )
-                        ],
+                      Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              color: const Color(0xffdddddd),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(40)),
+                        child: Row(
+                          children: [
+                            const SizedBox(width: 7.0),
+                            LikeButton(
+                              size: 28,
+                              circleColor: const CircleColor(
+                                  start: Color(0xff00ddff),
+                                  end: Color(0xff0099cc)),
+                              bubblesColor: const BubblesColor(
+                                dotPrimaryColor: Color(0xff33b5e5),
+                                dotSecondaryColor: Color(0xff0099cc),
+                              ),
+                              likeBuilder: (bool isLiked) {
+                                return const Text('🥰',
+                                    style: TextStyle(fontSize: 20.0));
+                              },
+                              likeCount: 100,
+                            ),
+                            const SizedBox(width: 7.0),
+                          ],
+                        ),
                       ),
                     ],
                   ),
