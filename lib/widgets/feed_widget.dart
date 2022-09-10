@@ -1,10 +1,8 @@
-import 'package:book_report_app/style/theme.dart';
+import 'package:book_report_app/widgets/comment_feed.dart';
+import 'package:book_report_app/widgets/emoji_buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 import 'package:book_report_app/widgets/widgets.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:like_button/like_button.dart';
 
 class FeedWidget extends StatelessWidget {
   const FeedWidget({Key? key}) : super(key: key);
@@ -117,61 +115,14 @@ class FeedWidget extends StatelessWidget {
             ),
           ),
           const BookLink(),
-          SizedBox(
+          const SizedBox(
             // footer
             height: 40.0,
             child: Padding(
-              padding:
-                  const EdgeInsets.only(left: 8.0, right: 8.0, bottom: 3.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                              color: const Color(0xffdddddd),
-                              width: 1,
-                            ),
-                            borderRadius: BorderRadius.circular(40)),
-                        child: Row(
-                          children: [
-                            const SizedBox(width: 7.0),
-                            LikeButton(
-                              size: 28,
-                              circleColor: const CircleColor(
-                                  start: Color(0xff00ddff),
-                                  end: Color(0xff0099cc)),
-                              bubblesColor: const BubblesColor(
-                                dotPrimaryColor: Color(0xff33b5e5),
-                                dotSecondaryColor: Color(0xff0099cc),
-                              ),
-                              likeBuilder: (bool isLiked) {
-                                return const Text('🥰',
-                                    style: TextStyle(fontSize: 20.0));
-                              },
-                              likeCount: 100,
-                            ),
-                            const SizedBox(width: 7.0),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: const [
-                      Icon(
-                        CupertinoIcons.ellipsis,
-                        size: 20,
-                        color: AppColors.secondary,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+                padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 3.0),
+                child: EmojiButtons()),
           ),
+          const CommentFeed()
         ],
       ),
     );
