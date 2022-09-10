@@ -135,9 +135,8 @@ class _EmojiButtonsState extends State<EmojiButtons> {
         Row(
           children: const [
             Icon(
-              CupertinoIcons.ellipsis,
+              CupertinoIcons.ellipsis_vertical,
               size: 20,
-              color: AppColors.secondary,
             ),
           ],
         ),

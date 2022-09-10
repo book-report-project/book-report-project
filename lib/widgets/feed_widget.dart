@@ -1,3 +1,4 @@
+import 'package:book_report_app/widgets/comment_feed.dart';
 import 'package:book_report_app/widgets/emoji_buttons.dart';
 import 'package:flutter/material.dart';
 
@@ -121,6 +122,7 @@ class FeedWidget extends StatelessWidget {
                 padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 3.0),
                 child: EmojiButtons()),
           ),
+          const CommentFeed()
         ],
       ),
     );
