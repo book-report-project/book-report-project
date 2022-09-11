@@ -1,3 +1,4 @@
+import 'package:book_report_app/screens/notification_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -50,7 +51,10 @@ class AppBarWidgetState extends State<AppBarWidget> {
             child: IconBackground(
                 icon: CupertinoIcons.bell,
                 onTap: () {
-                  print('Search Clicked');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const NotificationScreen()));
                 }),
           ),
         ),
