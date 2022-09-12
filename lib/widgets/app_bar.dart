@@ -1,4 +1,7 @@
 import 'package:book_report_app/screens/notification_screen.dart';
+import 'package:book_report_app/models/models.dart';
+import 'package:book_report_app/screens/chat_screen.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +43,14 @@ class AppBarWidgetState extends State<AppBarWidget> {
             child: IconBackground(
                 icon: CupertinoIcons.mail,
                 onTap: () {
-                  print('Message Clicked');
+                  final messageData = MessageData(
+                      senderName: 'senderName',
+                      message: 'message',
+                      messageDate: DateTime.now(),
+                      dateMessage: 'asdfasdf',
+                      profilePicture:
+                          'https://item.kakaocdn.net/do/d0abc6fe74e616536cf07626699bbc707154249a3890514a43687a85e6b6cc82');
+                  Navigator.of(context).push(ChatScreen.route(messageData));
                 }),
           ),
         ),
