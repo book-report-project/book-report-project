@@ -1,4 +1,5 @@
 import 'package:book_report_app/style/theme.dart';
+import 'package:book_report_app/widgets/tab/alarm_list.dart';
 import 'package:flutter/material.dart';
 
 class CommonTabBar extends StatefulWidget {
@@ -29,7 +30,7 @@ class _TabBarState extends State<CommonTabBar> {
                       ))),
             ),
             bottom: PreferredSize(
-              preferredSize: new Size(00.0, 30.0),
+              preferredSize: const Size(00.0, 30.0),
               child: TabBar(
                 labelColor: Colors.white,
                 unselectedLabelColor: Colors.white,
@@ -63,7 +64,7 @@ class _TabBarState extends State<CommonTabBar> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text('8', style: TextStyle(fontSize: 11)),
+                              const Text('8', style: TextStyle(fontSize: 11)),
                             ],
                           ),
                         )
@@ -91,7 +92,7 @@ class _TabBarState extends State<CommonTabBar> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text('6', style: TextStyle(fontSize: 11)),
+                              const Text('6', style: TextStyle(fontSize: 11)),
                             ],
                           ),
                         )
@@ -119,7 +120,7 @@ class _TabBarState extends State<CommonTabBar> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text('2', style: TextStyle(fontSize: 11)),
+                              const Text('2', style: TextStyle(fontSize: 11)),
                             ],
                           ),
                         )
@@ -132,9 +133,9 @@ class _TabBarState extends State<CommonTabBar> {
           ),
           body: const TabBarView(
             children: [
-              Icon(Icons.directions_car),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
+              AlarmList(),
+              AlarmList(),
+              AlarmList(),
             ],
           ),
         ),
