@@ -8,3 +8,5 @@ export 'recommand_following.dart';
 export 'hr.dart';
 export 'book_link.dart';
 export 'feed_widget.dart';
+
+export 'tab/tab_bar.dart';
