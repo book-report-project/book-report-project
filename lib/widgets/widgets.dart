@@ -10,6 +10,7 @@ export 'book_link.dart';
 export 'feed_widget.dart';
 export 'emoji_buttons.dart';
 export 'comment_feed.dart';
+export 'message_input.dart';
 
 export 'tab/tab_bar.dart';
 export 'tab/alarm_list.dart';
