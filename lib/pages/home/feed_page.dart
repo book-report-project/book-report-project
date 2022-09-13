@@ -22,10 +22,14 @@ class FeedPageState extends State<FeedPage> {
           // const RecommandFollowing()
           Column(
             children: const [
-              FeedWidget(),
-              FeedWidget(),
-              FeedWidget(),
-              FeedWidget(),
+              Hr(),
+              FeedWidget(isDetail: false),
+              Hr(),
+              FeedWidget(isDetail: false),
+              Hr(),
+              FeedWidget(isDetail: false),
+              Hr(),
+              FeedWidget(isDetail: false),
             ],
           ),
         ],

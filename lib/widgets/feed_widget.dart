@@ -5,7 +5,9 @@ import 'package:book_report_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class FeedWidget extends StatelessWidget {
-  const FeedWidget({Key? key}) : super(key: key);
+  const FeedWidget({Key? key, required this.isDetail}) : super(key: key);
+
+  final bool isDetail;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,6 @@ class FeedWidget extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
-          const Hr(),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
@@ -105,19 +106,22 @@ class FeedWidget extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 5),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailScreen()));
-                    },
-                    child: Text(
-                      textAlign: TextAlign.left,
-                      "더보기",
-                      style: const TextStyle(fontSize: 15.0),
-                    ),
-                  ),
+                  !isDetail
+                      ? GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DetailScreen()));
+                          },
+                          child: Text(
+                            textAlign: TextAlign.left,
+                            "더보기",
+                            style: const TextStyle(fontSize: 15.0),
+                          ),
+                        )
+                      : Container(),
                 ],
               ),
             ),
@@ -130,7 +134,7 @@ class FeedWidget extends StatelessWidget {
                 padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 3.0),
                 child: EmojiButtons()),
           ),
-          const CommentFeed()
+          !isDetail ? const CommentFeed() : Hr()
         ],
       ),
     );

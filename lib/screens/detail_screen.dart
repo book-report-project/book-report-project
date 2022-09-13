@@ -50,12 +50,17 @@ class _DetailScreenState extends State<DetailScreen> {
         ],
       ),
       body: Column(
-        children: [
-          const Expanded(
-            child: Text('Hello'),
-          )
-        ],
+        children: [Expanded(child: _DetailBody()), const MessageInput()],
       ),
+    );
+  }
+}
+
+class _DetailBody extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: const [FeedWidget(isDetail: true)],
     );
   }
 }
