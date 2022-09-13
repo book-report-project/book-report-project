@@ -1,11 +1,13 @@
-import 'package:book_report_app/widgets/comment_feed.dart';
-import 'package:book_report_app/widgets/emoji_buttons.dart';
+// ignore_for_file: prefer_const_constructors
+
+import 'package:book_report_app/screens/screens.dart';
+import 'package:book_report_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-import 'package:book_report_app/widgets/widgets.dart';
-
 class FeedWidget extends StatelessWidget {
-  const FeedWidget({Key? key}) : super(key: key);
+  const FeedWidget({Key? key, required this.isDetail}) : super(key: key);
+
+  final bool isDetail;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,6 @@ class FeedWidget extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
-          const Hr(),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
@@ -88,7 +89,7 @@ class FeedWidget extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     maxLines: 11,
                     overflow: TextOverflow.ellipsis,
@@ -99,17 +100,28 @@ class FeedWidget extends StatelessWidget {
 이 없는 얼마나 그들의 꽃 꽃이 주며, 끓는 더운지라 사막이다. 노년에게서 목숨을 그들에게 같은 갑 봄바람을 착목한는 봄바람이다. 설산에서 어디 날카로우나 맺어, 부패뿐이다. 힘차게 가장 심장의 청춘을 이것이다. 바이며, 만물은 찾아 있으며, 사람은 창공에 따뜻한 트고, 열매를 보라. 부패를 가슴에 뛰노는 같은 일월과 곧 품고 설산에서 위하여 보라.
 
 두기 봄바람을 얼음 내려온 듣는다. 수 그들은 모래뿐일 열락의 넣는 가는 것이다. 때에, 속에서 눈이 아니한 청춘의 청춘 위하여서. 이상의 않는 어디 만천하의 있는 열매를 불어 위하여서 뭇 운다. 능히 인생에 이 우리 갑 말이다. 있는 튼튼하며, 것이다.보라, 소금이라 사막이다. 주며, 따뜻한 할지라도 사랑의 이상, 황금시대다. 같이, 그들의 내려온 긴지라 황금시대다. 소리다.이것은 품으며, 커다란 따뜻한 아니다.''',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.normal,
                       fontSize: 12,
                     ),
                   ),
-                  SizedBox(height: 5),
-                  Text(
-                    textAlign: TextAlign.left,
-                    "더보기",
-                    style: TextStyle(fontSize: 15.0),
-                  ),
+                  const SizedBox(height: 5),
+                  !isDetail
+                      ? GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DetailScreen()));
+                          },
+                          child: Text(
+                            textAlign: TextAlign.left,
+                            "더보기",
+                            style: const TextStyle(fontSize: 15.0),
+                          ),
+                        )
+                      : Container(),
                 ],
               ),
             ),
@@ -122,7 +134,7 @@ class FeedWidget extends StatelessWidget {
                 padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 3.0),
                 child: EmojiButtons()),
           ),
-          const CommentFeed()
+          !isDetail ? const CommentFeed() : Hr()
         ],
       ),
     );

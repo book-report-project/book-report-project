@@ -1,3 +1,4 @@
+import 'package:book_report_app/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class CommentFeed extends StatefulWidget {
@@ -40,9 +41,17 @@ class _CommentFeedState extends State<CommentFeed> {
             const SizedBox(
               height: 5,
             ),
-            const Text(
-              '댓글 더보기',
-              style: TextStyle(color: Colors.grey, fontSize: 13.0),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const DetailScreen()));
+              },
+              child: const Text(
+                '댓글 더보기',
+                style: TextStyle(color: Colors.grey, fontSize: 13.0),
+              ),
             ),
           ],
         ),
