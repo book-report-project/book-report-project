@@ -11,6 +11,7 @@ export 'feed_widget.dart';
 export 'emoji_buttons.dart';
 export 'comment_feed.dart';
 export 'message_input.dart';
+export 'message_simple_input.dart';
 export 'comment_list.dart';
 export 'comment_detail.dart';
 

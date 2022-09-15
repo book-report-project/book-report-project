@@ -1,7 +1,5 @@
-import 'package:book_report_app/screens/reply_screen.dart';
 import 'package:book_report_app/style/theme.dart';
 import 'package:book_report_app/widgets/widgets.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CommentDetail extends StatelessWidget {
@@ -78,10 +76,6 @@ class _CommentData extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                const Icon(
-                                  CupertinoIcons.ellipsis_vertical,
-                                  size: 15,
-                                ),
                               ],
                             ),
                             const SizedBox(height: 10),
@@ -94,22 +88,13 @@ class _CommentData extends StatelessWidget {
                             ),
                             const SizedBox(height: 10),
                             Row(
-                              children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ReplyScreen()));
-                                  },
-                                  child: const Text(
-                                    '댓글 7개',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.normal,
-                                        fontSize: 12,
-                                        color: AppColors.textHighlight),
-                                  ),
+                              children: const [
+                                Text(
+                                  '댓글 7개',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 12,
+                                      color: AppColors.textHighlight),
                                 ),
                               ],
                             ),
