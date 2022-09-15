@@ -63,7 +63,7 @@ class _DetailBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: const [FeedWidget(isDetail: true), CommentDetail()],
+      children: const [FeedWidget(isDetail: true), CommentList()],
     );
   }
 }

@@ -1,26 +1,64 @@
-import 'package:book_report_app/style/theme.dart';
 import 'package:book_report_app/widgets/widgets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CommentDetail extends StatelessWidget {
-  const CommentDetail({Key? key}) : super(key: key);
+class ReplyScreen extends StatelessWidget {
+  const ReplyScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return _Comment();
+    return Scaffold(
+        appBar: AppBar(
+          iconTheme: Theme.of(context).iconTheme,
+          centerTitle: false,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          leadingWidth: 54,
+          leading: Align(
+            alignment: Alignment.centerRight,
+            child: IconBackground(
+                icon: CupertinoIcons.back,
+                onTap: () {
+                  Navigator.of(context).pop();
+                }),
+          ),
+          title: const Text('인철님의 댓글', style: TextStyle(fontSize: 14.0)),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Center(
+                child: IconBorder(
+                  icon: CupertinoIcons.ellipsis_vertical,
+                  onTap: () {},
+                ),
+              ),
+            ),
+          ],
+        ),
+        body: Column(
+          children: [
+            const CommentDetail(),
+            const MessageSimpleInput(),
+            Expanded(
+              child: ListView(
+                children: [
+                  _ReplyData(),
+                  _ReplyData(),
+                  _ReplyData(),
+                  _ReplyData(),
+                  _ReplyData(),
+                  _ReplyData(),
+                  _ReplyData(),
+                  _ReplyData(),
+                ],
+              ),
+            )
+          ],
+        ));
   }
 }
 
-class _Comment extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [_CommentData()],
-    );
-  }
-}
-
-class _CommentData extends StatelessWidget {
+class _ReplyData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,7 +79,7 @@ class _CommentData extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const Avatar.medium(
+                  const Avatar.small(
                       url:
                           'https://item.kakaocdn.net/do/d0abc6fe74e616536cf07626699bbc707154249a3890514a43687a85e6b6cc82'),
                   Padding(
@@ -85,18 +123,6 @@ class _CommentData extends StatelessWidget {
                                 fontWeight: FontWeight.normal,
                                 fontSize: 10,
                               ),
-                            ),
-                            const SizedBox(height: 10),
-                            Row(
-                              children: const [
-                                Text(
-                                  '댓글 7개',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 12,
-                                      color: AppColors.textHighlight),
-                                ),
-                              ],
                             ),
                           ],
                         ),

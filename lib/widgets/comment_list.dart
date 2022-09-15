@@ -1,9 +1,11 @@
+import 'package:book_report_app/screens/reply_screen.dart';
 import 'package:book_report_app/style/theme.dart';
 import 'package:book_report_app/widgets/widgets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CommentDetail extends StatelessWidget {
-  const CommentDetail({Key? key}) : super(key: key);
+class CommentList extends StatelessWidget {
+  const CommentList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class _Comment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [_CommentData()],
+      children: [_CommentData(), _CommentData(), _CommentData()],
     );
   }
 }
@@ -76,6 +78,10 @@ class _CommentData extends StatelessWidget {
                                     ),
                                   ],
                                 ),
+                                const Icon(
+                                  CupertinoIcons.ellipsis_vertical,
+                                  size: 15,
+                                ),
                               ],
                             ),
                             const SizedBox(height: 10),
@@ -88,13 +94,22 @@ class _CommentData extends StatelessWidget {
                             ),
                             const SizedBox(height: 10),
                             Row(
-                              children: const [
-                                Text(
-                                  '댓글 7개',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 12,
-                                      color: AppColors.textHighlight),
+                              children: [
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const ReplyScreen()));
+                                  },
+                                  child: const Text(
+                                    '댓글 7개',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 12,
+                                        color: AppColors.textHighlight),
+                                  ),
                                 ),
                               ],
                             ),
