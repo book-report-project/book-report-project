@@ -127,12 +127,14 @@ class FeedWidget extends StatelessWidget {
             ),
           ),
           const BookLink(),
-          const SizedBox(
+          SizedBox(
             // footer
             height: 40.0,
             child: Padding(
                 padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 3.0),
-                child: EmojiButtons()),
+                child: EmojiButtons(
+                  isDetail: isDetail,
+                )),
           ),
           !isDetail ? const CommentFeed() : Hr()
         ],
