@@ -70,7 +70,13 @@ class FeedWidget extends StatelessWidget {
                     ],
                   ),
                   OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showModalBottomSheet<void>(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return BottomModal();
+                            });
+                      },
                       child: const Text(
                         "팔로우",
                         style: TextStyle(fontSize: 13.0),
