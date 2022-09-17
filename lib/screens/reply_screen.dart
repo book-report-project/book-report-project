@@ -81,7 +81,7 @@ class _ReplyData extends StatelessWidget {
                 children: [
                   const Avatar.small(
                       url:
-                          'https://item.kakaocdn.net/do/d0abc6fe74e616536cf07626699bbc707154249a3890514a43687a85e6b6cc82'),
+                          'https://avatars.githubusercontent.com/u/49556566?v=4'),
                   Padding(
                     padding: const EdgeInsets.only(left: 18.0),
                     child: SizedBox(

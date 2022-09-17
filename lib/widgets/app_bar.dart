@@ -49,7 +49,7 @@ class AppBarWidgetState extends State<AppBarWidget> {
                       messageDate: DateTime.now(),
                       dateMessage: 'asdfasdf',
                       profilePicture:
-                          'https://item.kakaocdn.net/do/d0abc6fe74e616536cf07626699bbc707154249a3890514a43687a85e6b6cc82');
+                          'https://avatars.githubusercontent.com/u/49556566?v=4');
                   Navigator.of(context).push(ChatScreen.route(messageData));
                 }),
           ),
