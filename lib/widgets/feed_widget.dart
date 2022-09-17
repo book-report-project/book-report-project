@@ -70,7 +70,16 @@ class FeedWidget extends StatelessWidget {
                     ],
                   ),
                   OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showModalBottomSheet<void>(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            context: context,
+                            builder: (BuildContext context) {
+                              return FollowModal();
+                            });
+                      },
                       child: const Text(
                         "팔로우",
                         style: TextStyle(fontSize: 13.0),
