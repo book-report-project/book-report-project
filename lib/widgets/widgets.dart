@@ -14,7 +14,7 @@ export 'message_input.dart';
 export 'message_simple_input.dart';
 export 'comment_list.dart';
 export 'comment_detail.dart';
-export 'bottom_modal.dart';
+export 'bottom_modals/follow_modal.dart';
 
 export 'tab/tab_bar.dart';
 export 'tab/alarm_list.dart';

@@ -72,9 +72,12 @@ class FeedWidget extends StatelessWidget {
                   OutlinedButton(
                       onPressed: () {
                         showModalBottomSheet<void>(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
                             context: context,
                             builder: (BuildContext context) {
-                              return BottomModal();
+                              return FollowModal();
                             });
                       },
                       child: const Text(
