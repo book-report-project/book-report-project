@@ -1,5 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 import 'package:flutter/cupertino.dart';
+
+import 'package:book_report_app/widgets/widgets.dart';
 
 class EmojiButtons extends StatefulWidget {
   const EmojiButtons({Key? key, required this.isDetail}) : super(key: key);
@@ -134,10 +137,26 @@ class _EmojiButtonsState extends State<EmojiButtons> {
         ),
         !widget.isDetail
             ? Row(
-                children: const [
-                  Icon(
-                    CupertinoIcons.ellipsis_vertical,
-                    size: 20,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      showModalBottomSheet<void>(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          context: context,
+                          builder: (BuildContext context) {
+                            return const DetailModal();
+                          });
+                    },
+                    child: Container(
+                      color: Colors.transparent,
+                      width: 20,
+                      child: const Icon(
+                        CupertinoIcons.ellipsis_vertical,
+                        size: 20,
+                      ),
+                    ),
                   ),
                 ],
               )
