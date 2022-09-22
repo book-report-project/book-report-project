@@ -39,7 +39,7 @@ class ChatScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Center(
-              child: IconBorder(
+              child: IconBackground(
                 icon: CupertinoIcons.video_camera_solid,
                 onTap: () {},
               ),
@@ -48,7 +48,7 @@ class ChatScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 20),
             child: Center(
-              child: IconBorder(
+              child: IconBackground(
                 icon: CupertinoIcons.phone_solid,
                 onTap: () {},
               ),

@@ -28,7 +28,8 @@ class _IconBackgroundState extends State<IconBackground> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Theme.of(context).cardColor,
+      elevation: 0.5,
+      color: AppColors.cardLight,
       borderRadius: BorderRadius.circular(6),
       child: InkWell(
         borderRadius: BorderRadius.circular(6),
