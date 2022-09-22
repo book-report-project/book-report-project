@@ -27,7 +27,7 @@ class ReplyScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 20),
               child: Center(
-                child: IconBorder(
+                child: IconBackground(
                   icon: CupertinoIcons.ellipsis_vertical,
                   onTap: () {},
                 ),

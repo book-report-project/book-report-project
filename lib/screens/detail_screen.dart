@@ -32,7 +32,7 @@ class _DetailScreenState extends State<DetailScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Center(
-              child: IconBorder(
+              child: IconBackground(
                 icon: CupertinoIcons.share,
                 onTap: () {},
               ),
@@ -41,7 +41,7 @@ class _DetailScreenState extends State<DetailScreen> {
           Padding(
             padding: const EdgeInsets.only(right: 20),
             child: Center(
-              child: IconBorder(
+              child: IconBackground(
                 icon: CupertinoIcons.ellipsis_vertical,
                 onTap: () {},
               ),
