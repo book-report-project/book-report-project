@@ -82,7 +82,7 @@ class FeedWidget extends StatelessWidget {
                       },
                       child: const Text(
                         "팔로우",
-                        style: TextStyle(fontSize: 13.0),
+                        style: TextStyle(fontSize: 13.0, color: Colors.black54),
                       )),
                 ],
               ),

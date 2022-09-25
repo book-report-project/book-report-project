@@ -8,10 +8,12 @@ class IconBackground extends StatefulWidget {
     Key? key,
     required this.icon,
     required this.onTap,
+    this.iconColor = Colors.black,
   }) : super(key: key);
 
   final IconData icon;
   final VoidCallback onTap;
+  final Color iconColor;
 
   @override
   State<IconBackground> createState() => _IconBackgroundState();
@@ -46,10 +48,7 @@ class _IconBackgroundState extends State<IconBackground> {
             child: Column(
               children: [
                 _badge(isNewData),
-                Icon(
-                  widget.icon,
-                  size: 16,
-                ),
+                Icon(widget.icon, size: 16, color: widget.iconColor),
               ],
             ),
           ),
