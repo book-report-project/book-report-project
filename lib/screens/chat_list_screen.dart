@@ -3,6 +3,7 @@ import 'package:book_report_app/screens/chat_screen.dart';
 import 'package:book_report_app/style/theme.dart';
 import 'package:book_report_app/utils/utils.dart';
 import 'package:book_report_app/widgets/widgets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:faker/faker.dart';
 import 'package:jiffy/jiffy.dart';
@@ -15,7 +16,7 @@ class ChatListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leadingWidth: 200,
+        leadingWidth: 150,
         leading: const Padding(
           padding: EdgeInsets.only(left: 25),
           child: Align(
@@ -27,6 +28,17 @@ class ChatListScreen extends StatelessWidget {
                     color: Colors.black87,
                   ))),
         ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: Center(
+              child: IconBackground(
+                icon: CupertinoIcons.trash_slash,
+                onTap: () {},
+              ),
+            ),
+          ),
+        ],
       ),
       body: CustomScrollView(
         slivers: [
