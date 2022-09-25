@@ -1,3 +1,4 @@
+import 'package:book_report_app/screens/chat_list_screen.dart';
 import 'package:book_report_app/screens/notification_screen.dart';
 import 'package:book_report_app/models/models.dart';
 import 'package:book_report_app/screens/chat_screen.dart';
@@ -43,14 +44,10 @@ class AppBarWidgetState extends State<AppBarWidget> {
             child: IconBackground(
                 icon: CupertinoIcons.mail,
                 onTap: () {
-                  final messageData = MessageData(
-                      senderName: 'senderName',
-                      message: 'message',
-                      messageDate: DateTime.now(),
-                      dateMessage: 'asdfasdf',
-                      profilePicture:
-                          'https://avatars.githubusercontent.com/u/49556566?v=4');
-                  Navigator.of(context).push(ChatScreen.route(messageData));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ChatListScreen()));
                 }),
           ),
         ),
