@@ -55,7 +55,7 @@ Widget _pleaseWriteBookReport(BuildContext context) {
                         onPressed: () {},
                         child: const Text(
                           "🎉  인철 님의 첫 독후감을 작성해주세요.",
-                          style: TextStyle(fontSize: 13.0),
+                          style: TextStyle(fontSize: 13.0, color: Colors.black),
                         )),
                   ),
                   Padding(
