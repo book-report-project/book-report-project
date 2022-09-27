@@ -1,4 +1,4 @@
-import 'package:book_report_app/screens/detail_screen.dart';
+import 'package:book_report_app/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class CommentFeed extends StatefulWidget {

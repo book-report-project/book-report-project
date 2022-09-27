@@ -1,7 +1,4 @@
-import 'package:book_report_app/screens/chat_list_screen.dart';
-import 'package:book_report_app/screens/notification_screen.dart';
-import 'package:book_report_app/models/models.dart';
-import 'package:book_report_app/screens/chat_screen.dart';
+import 'package:book_report_app/screens/screens.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
