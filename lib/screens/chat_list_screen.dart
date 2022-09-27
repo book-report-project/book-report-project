@@ -1,12 +1,13 @@
-import 'package:book_report_app/models/message_data.dart';
-import 'package:book_report_app/screens/chat_screen.dart';
-import 'package:book_report_app/style/theme.dart';
-import 'package:book_report_app/utils/utils.dart';
-import 'package:book_report_app/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:faker/faker.dart';
 import 'package:jiffy/jiffy.dart';
+
+import 'package:book_report_app/models/message_data.dart';
+import 'package:book_report_app/screens/screens.dart';
+import 'package:book_report_app/style/theme.dart';
+import 'package:book_report_app/utils/utils.dart';
+import 'package:book_report_app/widgets/widgets.dart';
 
 class ChatListScreen extends StatelessWidget {
   const ChatListScreen({Key? key}) : super(key: key);
