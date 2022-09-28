@@ -9,11 +9,19 @@ class IconBackground extends StatefulWidget {
     required this.icon,
     required this.onTap,
     this.iconColor = Colors.black,
+    this.size = 20.0,
+    this.iconSize = 16.0,
+    this.borderRadius = 6.0,
+    this.background = AppColors.cardLight,
   }) : super(key: key);
 
   final IconData icon;
   final VoidCallback onTap;
   final Color iconColor;
+  final double size;
+  final double iconSize;
+  final double borderRadius;
+  final Color background;
 
   @override
   State<IconBackground> createState() => _IconBackgroundState();
@@ -30,9 +38,9 @@ class _IconBackgroundState extends State<IconBackground> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 0.5,
-      color: AppColors.cardLight,
-      borderRadius: BorderRadius.circular(6),
+      elevation: 3,
+      color: widget.background,
+      borderRadius: BorderRadius.circular(widget.borderRadius),
       child: InkWell(
         borderRadius: BorderRadius.circular(6),
         splashColor: Theme.of(context).scaffoldBackgroundColor,
@@ -43,12 +51,13 @@ class _IconBackgroundState extends State<IconBackground> {
         child: Padding(
           padding: const EdgeInsets.all(6),
           child: SizedBox(
-            width: 20,
-            height: 20,
+            width: widget.size,
+            height: widget.size,
             child: Column(
               children: [
                 _badge(isNewData),
-                Icon(widget.icon, size: 16, color: widget.iconColor),
+                Icon(widget.icon,
+                    size: widget.iconSize, color: widget.iconColor),
               ],
             ),
           ),
