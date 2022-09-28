@@ -13,62 +13,86 @@ class SearchPage extends StatefulWidget {
 class SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20.0, top: 10.0),
+    return SingleChildScrollView(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-              child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20, right: 15, top: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    '무엇을',
+                    style:
+                        TextStyle(fontSize: 23.0, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 5.0),
+                  Text(
+                    '검색하시겠어요?',
+                    style: TextStyle(fontSize: 23.0),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          _SearchInput(),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0, top: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  '무엇을',
-                  style: TextStyle(fontSize: 23.0, fontWeight: FontWeight.bold),
+                _Icon(
+                  onTap: () {},
+                  icon: CupertinoIcons.alt,
+                  text: "독후감",
                 ),
-                const SizedBox(height: 5.0),
-                const Text(
-                  '검색하시겠어요?',
-                  style: TextStyle(fontSize: 23.0),
+                _Icon(
+                  onTap: () {},
+                  icon: CupertinoIcons.person,
+                  text: "유저",
                 ),
-                _SearchInput(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    _Icon(
-                      onTap: () {},
-                      icon: CupertinoIcons.alt,
-                      text: "독후감",
-                    ),
-                    _Icon(
-                      onTap: () {},
-                      icon: CupertinoIcons.person,
-                      text: "유저",
-                    ),
-                    _Icon(
-                      onTap: () {},
-                      icon: CupertinoIcons.book,
-                      text: "인기책",
-                    ),
-                    _Icon(
-                      onTap: () {},
-                      icon: CupertinoIcons.ellipsis,
-                      text: "기타",
-                    ),
-                  ],
+                _Icon(
+                  onTap: () {},
+                  icon: CupertinoIcons.book,
+                  text: "인기책",
                 ),
-                const Text(
-                  '현재 인기글',
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600),
+                _Icon(
+                  onTap: () {},
+                  icon: CupertinoIcons.ellipsis,
+                  text: "기타",
                 ),
-                const SizedBox(height: 10),
-                // _PopularList(),
               ],
             ),
-          )),
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: const Padding(
+              padding: EdgeInsets.only(left: 20.0),
+              child: Text(
+                '현재 인기글',
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600),
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
+          _PopularList(),
+          const SizedBox(height: 30),
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: const Padding(
+              padding: EdgeInsets.only(left: 20.0),
+              child: Text(
+                '추천 책',
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600),
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
+          _RecommandBookList(),
+          const SizedBox(height: 50),
         ],
       ),
     );
@@ -81,6 +105,7 @@ class _SearchInput extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 20, top: 20.0),
       child: Container(
+        margin: const EdgeInsets.only(left: 20),
         decoration: const BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -155,18 +180,45 @@ class _Icon extends StatelessWidget {
 class _PopularList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Container(
+      margin: const EdgeInsets.only(left: 20.0),
+      height: 200.0,
       child: ListView.builder(
+        physics: const ClampingScrollPhysics(),
         shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemCount: 15,
         itemBuilder: (BuildContext context, int index) => const Card(
-          margin: EdgeInsets.only(right: 20),
           child: SizedBox(
-              width: 250,
-              height: 80,
-              child: Center(child: Text('Dummy Card Text'))),
+            width: 120,
+            child: Center(
+              child: Text('Content'),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _RecommandBookList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(left: 20.0),
+      height: 200.0,
+      child: ListView.builder(
+        physics: const ClampingScrollPhysics(),
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        itemCount: 15,
+        itemBuilder: (BuildContext context, int index) => const Card(
+          child: SizedBox(
+            width: 120,
+            child: Center(
+              child: Text('Books'),
+            ),
+          ),
         ),
       ),
     );
