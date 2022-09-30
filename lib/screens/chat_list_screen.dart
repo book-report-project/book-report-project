@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:faker/faker.dart';
 import 'package:jiffy/jiffy.dart';
 
-import 'package:book_report_app/models/message_data.dart';
+import 'package:book_report_app/data/model/models.dart';
 import 'package:book_report_app/screens/screens.dart';
 import 'package:book_report_app/style/theme.dart';
 import 'package:book_report_app/utils/utils.dart';

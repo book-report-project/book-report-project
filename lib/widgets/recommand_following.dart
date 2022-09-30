@@ -1,7 +1,7 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:book_report_app/models/story_data.dart';
+import 'package:book_report_app/data/model/models.dart';
 import 'package:book_report_app/style/theme.dart';
 import 'package:book_report_app/utils/utils.dart';
 import 'package:book_report_app/widgets/widgets.dart';
@@ -20,8 +20,8 @@ class RecommandFollowing extends StatelessWidget {
             padding: const EdgeInsets.only(left: 16.0, top: 16, bottom: 16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
+              children: const [
+                Text(
                   '인철 님을 위한 추천 팔로잉',
                   style: TextStyle(
                     fontWeight: FontWeight.w900,
