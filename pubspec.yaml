@@ -19,6 +19,7 @@ dependencies:
   jiffy: ^5.0.0
   like_button: ^2.0.4
   get: ^4.6.1
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:
