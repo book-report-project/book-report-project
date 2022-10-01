@@ -3,6 +3,7 @@
 import 'package:book_report_app/screens/screens.dart';
 import 'package:book_report_app/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class FeedWidget extends StatelessWidget {
   const FeedWidget({Key? key, required this.isDetail}) : super(key: key);
@@ -118,11 +119,8 @@ class FeedWidget extends StatelessWidget {
                   !isDetail
                       ? GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const DetailScreen()));
+                            Get.to(const DetailScreen(),
+                                transition: Transition.cupertino);
                           },
                           child: Text(
                             textAlign: TextAlign.left,

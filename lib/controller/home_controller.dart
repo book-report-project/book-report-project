@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:book_report_app/datas/model/models.dart';
+import 'package:book_report_app/model/models.dart';
 
 class HomeController extends GetxController {
   User_Model? user_model;
@@ -40,7 +40,6 @@ class HomeController extends GetxController {
       }
     } catch (e) {
       log('Error while getting data is $e');
-      print('Error while getting data is $e');
     } finally {
       isDataLoading(false);
     }

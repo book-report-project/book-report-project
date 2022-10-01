@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:book_report_app/style/theme.dart';
 import 'package:book_report_app/utils/utils.dart';
 import 'package:book_report_app/widgets/widgets.dart';
-import 'package:book_report_app/datas/model/models.dart';
+import 'package:book_report_app/model/models.dart';
 
 class RecommandFollowing extends StatelessWidget {
   const RecommandFollowing({Key? key}) : super(key: key);
