@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:faker/faker.dart';
 import 'package:jiffy/jiffy.dart';
 
-import 'package:book_report_app/data/model/models.dart';
-import 'package:book_report_app/screens/screens.dart';
 import 'package:book_report_app/style/theme.dart';
 import 'package:book_report_app/utils/utils.dart';
+import 'package:book_report_app/screens/screens.dart';
 import 'package:book_report_app/widgets/widgets.dart';
+import 'package:book_report_app/datas/model/models.dart';
 
 class ChatListScreen extends StatelessWidget {
   const ChatListScreen({Key? key}) : super(key: key);

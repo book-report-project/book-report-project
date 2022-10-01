@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/widgets/widgets.dart';
-import 'package:book_report_app/data/model/models.dart';
+import 'package:book_report_app/datas/model/models.dart';
 
 class ChatScreen extends StatelessWidget {
   static Route route(MessageData data) => MaterialPageRoute(
