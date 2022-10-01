@@ -65,7 +65,7 @@ class AppBarWidgetState extends State<AppBarWidget> {
             child: IconBackground(
                 icon: CupertinoIcons.person,
                 onTap: () {
-                  print('User Clicked');
+                  Get.to(const UserScreen(), transition: Transition.cupertino);
                 }),
           ),
         ),
