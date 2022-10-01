@@ -1,9 +1,9 @@
-import 'package:book_report_app/screens/screens.dart';
-
+import 'package:get/route_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/widgets/widgets.dart';
+import 'package:book_report_app/screens/screens.dart';
 
 class AppBarWidget extends StatefulWidget with PreferredSizeWidget {
   const AppBarWidget({Key? key}) : super(key: key);
@@ -41,10 +41,8 @@ class AppBarWidgetState extends State<AppBarWidget> {
             child: IconBackground(
                 icon: CupertinoIcons.mail,
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ChatListScreen()));
+                  Get.to(const ChatListScreen(),
+                      transition: Transition.downToUp);
                 }),
           ),
         ),
@@ -55,10 +53,8 @@ class AppBarWidgetState extends State<AppBarWidget> {
             child: IconBackground(
                 icon: CupertinoIcons.bell,
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const NotificationScreen()));
+                  Get.to(const NotificationScreen(),
+                      transition: Transition.cupertino);
                 }),
           ),
         ),

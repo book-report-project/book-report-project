@@ -1,10 +1,10 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:book_report_app/models/story_data.dart';
 import 'package:book_report_app/style/theme.dart';
 import 'package:book_report_app/utils/utils.dart';
 import 'package:book_report_app/widgets/widgets.dart';
+import 'package:book_report_app/model/models.dart';
 
 class Stories extends StatelessWidget {
   const Stories({Key? key}) : super(key: key);
@@ -20,8 +20,8 @@ class Stories extends StatelessWidget {
             padding: const EdgeInsets.only(left: 16.0, top: 16, bottom: 16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
+              children: const [
+                Text(
                   '인철 님의 팔로잉',
                   style: TextStyle(
                     fontWeight: FontWeight.w900,
@@ -29,7 +29,7 @@ class Stories extends StatelessWidget {
                     color: AppColors.textFaded,
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(right: 16.0),
                   child: Text(
                     '전체 보기',

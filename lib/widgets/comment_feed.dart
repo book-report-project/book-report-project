@@ -1,5 +1,7 @@
-import 'package:book_report_app/screens/screens.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+
+import 'package:book_report_app/screens/screens.dart';
 
 class CommentFeed extends StatefulWidget {
   const CommentFeed({Key? key}) : super(key: key);
@@ -43,10 +45,7 @@ class _CommentFeedState extends State<CommentFeed> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const DetailScreen()));
+                Get.to(const DetailScreen(), transition: Transition.cupertino);
               },
               child: const Text(
                 '댓글 더보기',

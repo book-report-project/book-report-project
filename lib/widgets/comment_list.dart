@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 import 'package:book_report_app/screens/screens.dart';
 import 'package:book_report_app/style/theme.dart';
@@ -98,11 +99,8 @@ class _CommentData extends StatelessWidget {
                               children: [
                                 GestureDetector(
                                   onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const ReplyScreen()));
+                                    Get.to(const ReplyScreen(),
+                                        transition: Transition.cupertino);
                                   },
                                   child: const Text(
                                     '댓글 7개',
