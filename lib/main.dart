@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'package:book_report_app/screens/screens.dart';
 import 'package:book_report_app/style/theme.dart';
+import 'package:book_report_app/datas/constants/constants.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,12 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
         theme: AppTheme.light(),
         darkTheme: AppTheme.dark(),
+        debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.dark,
         // themeMode: ThemeMode.light,
         title: '독후감 앱 (가칭)',
+        // initialRoute: RouteConstant.homeScreen,
+        getPages: getPages,
         home: const HomeScreen());
   }
 }
