@@ -3,7 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/app/widgets/widgets.dart';
-import 'package:book_report_app/screens/screens.dart';
+import 'package:book_report_app/app/modules/chat_list/page.dart';
+import 'package:book_report_app/app/modules/notification/page.dart';
+import 'package:book_report_app/app/modules/user/page.dart';
 
 class AppBarWidget extends StatefulWidget with PreferredSizeWidget {
   const AppBarWidget({Key? key}) : super(key: key);

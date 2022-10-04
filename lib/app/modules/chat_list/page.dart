@@ -4,9 +4,9 @@ import 'package:faker/faker.dart';
 import 'package:get/route_manager.dart';
 import 'package:jiffy/jiffy.dart';
 
+import 'package:book_report_app/app/modules/chat/page.dart';
 import 'package:book_report_app/core/theme/theme.dart';
 import 'package:book_report_app/core/utils/utils.dart';
-import 'package:book_report_app/screens/screens.dart';
 import 'package:book_report_app/app/widgets/widgets.dart';
 import 'package:book_report_app/app/data/models/models.dart';
 

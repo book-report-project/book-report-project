@@ -1,6 +1,7 @@
-import 'package:book_report_app/core/theme/theme.dart';
-import 'package:book_report_app/widgets/tab/alarm_list.dart';
 import 'package:flutter/material.dart';
+
+import 'package:book_report_app/app/widgets/widgets.dart';
+import 'package:book_report_app/core/theme/theme.dart';
 
 class CommonTabBar extends StatefulWidget {
   const CommonTabBar({Key? key}) : super(key: key);

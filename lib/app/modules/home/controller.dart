@@ -1,7 +1,7 @@
-import 'package:book_report_app/app/data/services/app_config/service.dart';
 import 'package:get/get.dart';
 
-import 'package:book_report_app/app/modules/repository.dart';
+import 'package:book_report_app/app/data/services/app_config/service.dart';
+import 'package:book_report_app/app/modules/home/repository.dart';
 
 class HomeController extends GetxController with StateMixin {
   final HomeRepository repository;

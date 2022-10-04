@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import 'package:book_report_app/app/modules/binding.dart';
+import 'package:book_report_app/app/modules/home/binding.dart';
 import 'package:book_report_app/app/modules/home/page.dart';
 
 part './routes.dart';

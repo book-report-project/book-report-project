@@ -1,41 +1,35 @@
-import 'package:book_report_app/core/theme/theme.dart';
-import 'package:book_report_app/app/widgets/widgets.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MessageInput extends StatelessWidget {
-  const MessageInput({Key? key}) : super(key: key);
+import 'package:book_report_app/core/theme/theme.dart';
+import 'package:book_report_app/app/widgets/widgets.dart';
+
+class MessageSimpleInput extends StatelessWidget {
+  const MessageSimpleInput({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      bottom: true,
-      top: false,
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        shape: BoxShape.rectangle,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.1),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: const Offset(0, 13), // changes position of shadow
+          ),
+        ],
+      ),
       child: Row(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              border: Border(
-                right: BorderSide(
-                  width: 2,
-                  color: Theme.of(context).dividerColor,
-                ),
-              ),
-            ),
-            child: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Icon(
-                CupertinoIcons.camera_fill,
-              ),
-            ),
-          ),
           const Expanded(
             child: Padding(
-              padding: EdgeInsets.only(left: 16.0),
+              padding: EdgeInsets.only(left: 20.0),
               child: TextField(
                 style: TextStyle(fontSize: 14),
                 decoration: InputDecoration(
-                  hintText: 'Type something...',
+                  hintText: '대댓글 추가',
                   border: InputBorder.none,
                 ),
               ),

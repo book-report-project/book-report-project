@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:book_report_app/app/modules/detail/page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
+import 'package:book_report_app/app/modules/detail/page.dart';
 import 'package:book_report_app/app/widgets/widgets.dart';
 
 class FeedWidget extends StatelessWidget {

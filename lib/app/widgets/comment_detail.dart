@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import 'package:book_report_app/core/theme/theme.dart';
 import 'package:book_report_app/app/widgets/widgets.dart';
-import 'package:flutter/material.dart';
 
 class CommentDetail extends StatelessWidget {
   const CommentDetail({Key? key}) : super(key: key);
