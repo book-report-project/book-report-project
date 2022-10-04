@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:book_report_app/widgets/widgets.dart';
+import 'package:book_report_app/app/widgets/widgets.dart';
 
 class EmojiButtons extends StatefulWidget {
   const EmojiButtons({Key? key, required this.isDetail}) : super(key: key);

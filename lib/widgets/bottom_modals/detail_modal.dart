@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:book_report_app/widgets/widgets.dart';
+import 'package:book_report_app/app/widgets/widgets.dart';
 
 class DetailModal extends StatelessWidget {
   const DetailModal({Key? key}) : super(key: key);

@@ -1,4 +1,4 @@
-import 'package:book_report_app/widgets/widgets.dart';
+import 'package:book_report_app/app/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

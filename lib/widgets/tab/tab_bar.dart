@@ -1,4 +1,4 @@
-import 'package:book_report_app/style/theme.dart';
+import 'package:book_report_app/core/theme/theme.dart';
 import 'package:book_report_app/widgets/tab/alarm_list.dart';
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:book_report_app/style/theme.dart';
-import 'package:book_report_app/widgets/widgets.dart';
+import 'package:book_report_app/core/theme/theme.dart';
+import 'package:book_report_app/app/widgets/widgets.dart';
 
 class FollowModal extends StatelessWidget {
   const FollowModal({Key? key}) : super(key: key);

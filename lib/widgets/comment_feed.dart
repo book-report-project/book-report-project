@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
-import 'package:book_report_app/screens/screens.dart';
+import 'package:book_report_app/app/modules/detail/page.dart';
 
 class CommentFeed extends StatefulWidget {
   const CommentFeed({Key? key}) : super(key: key);

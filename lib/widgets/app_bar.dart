@@ -2,7 +2,7 @@ import 'package:get/route_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:book_report_app/widgets/widgets.dart';
+import 'package:book_report_app/app/widgets/widgets.dart';
 import 'package:book_report_app/screens/screens.dart';
 
 class AppBarWidget extends StatefulWidget with PreferredSizeWidget {

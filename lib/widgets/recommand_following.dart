@@ -1,10 +1,10 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:book_report_app/style/theme.dart';
-import 'package:book_report_app/utils/utils.dart';
-import 'package:book_report_app/widgets/widgets.dart';
-import 'package:book_report_app/model/models.dart';
+import 'package:book_report_app/core/theme/theme.dart';
+import 'package:book_report_app/core/utils/utils.dart';
+import 'package:book_report_app/app/widgets/widgets.dart';
+import 'package:book_report_app/app/data/models/models.dart';
 
 class RecommandFollowing extends StatelessWidget {
   const RecommandFollowing({Key? key}) : super(key: key);

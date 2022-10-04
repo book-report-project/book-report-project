@@ -1,13 +1,13 @@
 import 'dart:io' show Platform;
-import 'package:book_report_app/style/theme.dart';
-import 'package:book_report_app/widgets/widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:book_report_app/pages/home/feed_page.dart';
-import 'package:book_report_app/pages/home/search_page.dart';
-import 'package:book_report_app/pages/home/write_page.dart';
-import 'package:book_report_app/pages/home/setting_page.dart';
+import 'package:book_report_app/core/theme/theme.dart';
+import 'package:book_report_app/app/widgets/widgets.dart';
+import 'package:book_report_app/app/modules/home/sub/feed_page.dart';
+import 'package:book_report_app/app/modules/home/sub/search_page.dart';
+import 'package:book_report_app/app/modules/home/sub/setting_page.dart';
+import 'package:book_report_app/app/modules/home/sub/write_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:book_report_app/style/theme.dart';
-import 'package:book_report_app/widgets/widgets.dart';
+import 'package:book_report_app/core/theme/theme.dart';
+import 'package:book_report_app/app/widgets/feed_widget.dart';
+import 'package:book_report_app/app/widgets/hr.dart';
+import 'package:book_report_app/app/modules/home/widgets/stories.dart';
 
 class FeedPage extends StatefulWidget {
   const FeedPage({Key? key}) : super(key: key);
