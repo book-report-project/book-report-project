@@ -40,7 +40,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
+      initialIndex: 0,
       length: 4,
       child: Scaffold(
         appBar: const AppBarWidget(),
