@@ -1,6 +1,9 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/app/widgets/widgets.dart';
+import 'package:book_report_app/app/modules/user/widgets/counting_buttons.dart';
 
 class UserScreen extends StatefulWidget {
   const UserScreen({Key? key}) : super(key: key);
@@ -90,7 +93,7 @@ Email: sxin294999@gamil.com
                           color: Colors.blueGrey,
                           fontWeight: FontWeight.w200),
                     ),
-                    _CountingButtons()
+                    CountingButtons(currentIndex: currentIndex)
                   ],
                 ),
               ),
@@ -98,85 +101,6 @@ Email: sxin294999@gamil.com
           ],
         ),
       )),
-    );
-  }
-}
-
-class _CountingButtons extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 5, bottom: 100),
-      child: Container(
-        height: 75,
-        decoration: BoxDecoration(
-          color: const Color(0xffb48aeb),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.7),
-              spreadRadius: 3,
-              blurRadius: 7,
-              offset: const Offset(0, 5),
-            ),
-          ],
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(12),
-            topRight: Radius.circular(12),
-            bottomRight: Radius.circular(12),
-            bottomLeft: Radius.circular(12),
-          ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const _CheckBox(title: 'Posts', text: '212', index: 0),
-            const _CheckBox(title: '팔로잉', text: '20', index: 1),
-            const _CheckBox(title: '팔로워', text: '20k', index: 2),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _CheckBox extends StatelessWidget {
-  const _CheckBox({
-    Key? key,
-    required this.title,
-    required this.text,
-    required this.index,
-  }) : super(key: key);
-
-  final String title;
-  final String text;
-  final int index;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 75,
-      width: (MediaQuery.of(context).size.width - 60) / 3,
-      decoration: BoxDecoration(
-        color: index == 0 ? const Color(0xff9c61e8) : Colors.transparent,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(12),
-          topRight: Radius.circular(12),
-          bottomRight: Radius.circular(12),
-          bottomLeft: Radius.circular(12),
-        ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(title,
-              style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600)),
-          const SizedBox(height: 8),
-          Text(text, style: const TextStyle(color: Colors.white, fontSize: 14)),
-        ],
-      ),
     );
   }
 }
