@@ -48,7 +48,8 @@ class DetailModal extends StatelessWidget {
                           print('Share Clicked');
                         }),
                     const SizedBox(width: 15),
-                    const Text('게시글 공유하기')
+                    const Text('게시글 공유하기',
+                        style: TextStyle(color: Colors.black87))
                   ],
                 ),
               ),
@@ -67,7 +68,8 @@ class DetailModal extends StatelessWidget {
                           print('Share Clicked');
                         }),
                     const SizedBox(width: 15),
-                    const Text('게시글 저장하기')
+                    const Text('게시글 저장하기',
+                        style: TextStyle(color: Colors.black87))
                   ],
                 ),
               ),

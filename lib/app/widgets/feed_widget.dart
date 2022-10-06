@@ -7,9 +7,11 @@ import 'package:book_report_app/app/modules/detail/page.dart';
 import 'package:book_report_app/app/widgets/widgets.dart';
 
 class FeedWidget extends StatelessWidget {
-  const FeedWidget({Key? key, required this.isDetail}) : super(key: key);
+  const FeedWidget({Key? key, required this.isDetail, this.hideFollow = false})
+      : super(key: key);
 
   final bool isDetail;
+  final bool hideFollow;
 
   @override
   Widget build(BuildContext context) {
@@ -17,79 +19,83 @@ class FeedWidget extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              // Header
-              height: 60,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      const Avatar.medium(
-                          url:
-                              'https://avatars.githubusercontent.com/u/49556566?v=4'),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 12.0),
-                        child: SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.6,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  '인철',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 12,
+          !hideFollow
+              ? Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    // Header
+                    height: 60,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            const Avatar.medium(
+                                url:
+                                    'https://avatars.githubusercontent.com/u/49556566?v=4'),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 12.0),
+                              child: SizedBox(
+                                width: MediaQuery.of(context).size.width * 0.6,
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: const [
+                                      Text(
+                                        '인철',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                      SizedBox(height: 2),
+                                      Text(
+                                        '안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀 ...',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 10,
+                                        ),
+                                      ),
+                                      SizedBox(height: 2),
+                                      Text(
+                                        '3 일전',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 10,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                SizedBox(height: 2),
-                                Text(
-                                  '안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀 ...',
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 10,
-                                  ),
-                                ),
-                                SizedBox(height: 2),
-                                Text(
-                                  '3 일전',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 10,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
+                              ),
+                            )
+                          ],
                         ),
-                      )
-                    ],
+                        OutlinedButton(
+                            onPressed: () {
+                              showModalBottomSheet<void>(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20.0),
+                                  ),
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return FollowModal();
+                                  });
+                            },
+                            child: const Text(
+                              "팔로우",
+                              style: TextStyle(
+                                  fontSize: 13.0, color: Colors.black54),
+                            ))
+                      ],
+                    ),
                   ),
-                  OutlinedButton(
-                      onPressed: () {
-                        showModalBottomSheet<void>(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            context: context,
-                            builder: (BuildContext context) {
-                              return FollowModal();
-                            });
-                      },
-                      child: const Text(
-                        "팔로우",
-                        style: TextStyle(fontSize: 13.0, color: Colors.black54),
-                      )),
-                ],
-              ),
-            ),
-          ),
+                )
+              : Container(),
           Container(
             // body
             constraints: const BoxConstraints(
@@ -112,11 +118,11 @@ class FeedWidget extends StatelessWidget {
 
 두기 봄바람을 얼음 내려온 듣는다. 수 그들은 모래뿐일 열락의 넣는 가는 것이다. 때에, 속에서 눈이 아니한 청춘의 청춘 위하여서. 이상의 않는 어디 만천하의 있는 열매를 불어 위하여서 뭇 운다. 능히 인생에 이 우리 갑 말이다. 있는 튼튼하며, 것이다.보라, 소금이라 사막이다. 주며, 따뜻한 할지라도 사랑의 이상, 황금시대다. 같이, 그들의 내려온 긴지라 황금시대다. 소리다.이것은 품으며, 커다란 따뜻한 아니다.''',
                     style: const TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontSize: 12,
-                    ),
+                        fontWeight: FontWeight.normal,
+                        fontSize: 16,
+                        color: Colors.black87),
                   ),
-                  const SizedBox(height: 5),
+                  SizedBox(height: hideFollow ? 20 : 5),
                   !isDetail
                       ? GestureDetector(
                           onTap: () {
@@ -126,7 +132,8 @@ class FeedWidget extends StatelessWidget {
                           child: Text(
                             textAlign: TextAlign.left,
                             "더보기",
-                            style: const TextStyle(fontSize: 15.0),
+                            style: const TextStyle(
+                                fontSize: 15.0, color: Colors.black87),
                           ),
                         )
                       : Container(),

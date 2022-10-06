@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:book_report_app/app/modules/user/widgets/feed_table.dart';
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/app/widgets/widgets.dart';
@@ -93,7 +94,8 @@ Email: sxin294999@gamil.com
                           color: Colors.blueGrey,
                           fontWeight: FontWeight.w200),
                     ),
-                    CountingButtons(currentIndex: currentIndex)
+                    CountingButtons(currentIndex: currentIndex),
+                    FeedTable(),
                   ],
                 ),
               ),
