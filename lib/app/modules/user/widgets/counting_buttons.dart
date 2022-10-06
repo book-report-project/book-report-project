@@ -26,7 +26,7 @@ class CountingButtonsState extends State<CountingButtons> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 5, bottom: 100),
+      padding: const EdgeInsets.only(top: 5, bottom: 30),
       child: Container(
         height: 75,
         decoration: BoxDecoration(

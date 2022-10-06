@@ -18,7 +18,7 @@ class BookLink extends StatelessWidget {
             borderRadius: BorderRadius.circular(6),
             border: Border.all(
               width: 1.5,
-              color: isBlack ? Colors.black45 : Theme.of(context).cardColor,
+              color: isBlack ? Colors.black45 : Colors.white60,
             ),
           ),
           child: Row(
