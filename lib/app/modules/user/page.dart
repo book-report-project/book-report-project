@@ -1,11 +1,13 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:book_report_app/app/modules/user/widgets/feed_table.dart';
-import 'package:book_report_app/app/modules/user/widgets/user_list.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 import 'package:book_report_app/app/widgets/widgets.dart';
 import 'package:book_report_app/app/modules/user/widgets/counting_buttons.dart';
+import 'package:book_report_app/app/modules/user/widgets/feed_table.dart';
+import 'package:book_report_app/app/modules/user/widgets/user_list.dart';
 
 class UserScreen extends StatefulWidget {
   const UserScreen({Key? key}) : super(key: key);
@@ -22,18 +24,22 @@ class _UserScreenState extends State<UserScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leadingWidth: 400,
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 25),
-          child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text('Profile',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Colors.black87,
-                  ))),
+        centerTitle: false,
+        leading: GestureDetector(
+          onTap: () {
+            Get.back();
+          },
+          child: const Icon(
+            CupertinoIcons.back,
+            color: Colors.black,
+          ),
         ),
+        title: const Text('내 프로필',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              color: Colors.black87,
+            )),
       ),
       body: SingleChildScrollView(
           child: Container(

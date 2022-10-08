@@ -2,25 +2,26 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
-import 'package:book_report_app/app/widgets/widgets.dart';
 import 'package:book_report_app/core/theme/theme.dart';
+import 'package:book_report_app/app/modules/follow/widgets/follow_list.dart';
 
-class CommonTabBar extends StatefulWidget {
-  const CommonTabBar({Key? key}) : super(key: key);
+class FollowTabBar extends StatefulWidget {
+  const FollowTabBar({Key? key}) : super(key: key);
 
   @override
-  _TabBarState createState() => _TabBarState();
+  _FollowTabBarState createState() => _FollowTabBarState();
 }
 
-class _TabBarState extends State<CommonTabBar> {
+class _FollowTabBarState extends State<FollowTabBar> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
-        length: 3,
+        length: 2,
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
+            centerTitle: false,
             leading: GestureDetector(
               onTap: () {
                 Get.back();
@@ -30,8 +31,7 @@ class _TabBarState extends State<CommonTabBar> {
                 color: Colors.black,
               ),
             ),
-            centerTitle: false,
-            title: const Text('알림',
+            title: const Text('in-ch',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
@@ -58,7 +58,7 @@ class _TabBarState extends State<CommonTabBar> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const Text(
-                          'All',
+                          '팔로잉',
                           style: TextStyle(color: Colors.black, fontSize: 12.0),
                         ),
                         const SizedBox(width: 10),
@@ -72,7 +72,7 @@ class _TabBarState extends State<CommonTabBar> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Text('8', style: TextStyle(fontSize: 11)),
+                              const Text('1k', style: TextStyle(fontSize: 11)),
                             ],
                           ),
                         )
@@ -86,7 +86,7 @@ class _TabBarState extends State<CommonTabBar> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const Text(
-                          '새 반응',
+                          '팔로우',
                           style: TextStyle(color: Colors.black, fontSize: 12.0),
                         ),
                         const SizedBox(width: 10),
@@ -100,35 +100,7 @@ class _TabBarState extends State<CommonTabBar> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Text('6', style: TextStyle(fontSize: 11)),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 25,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const Text(
-                          '새 팔로잉',
-                          style: TextStyle(color: Colors.black, fontSize: 12.0),
-                        ),
-                        const SizedBox(width: 10),
-                        Container(
-                          width: 20,
-                          height: 17,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(2),
-                            color: AppColors.secondary,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text('2', style: TextStyle(fontSize: 11)),
+                              const Text('0', style: TextStyle(fontSize: 11)),
                             ],
                           ),
                         )
@@ -141,9 +113,8 @@ class _TabBarState extends State<CommonTabBar> {
           ),
           body: const TabBarView(
             children: [
-              AlarmList(),
-              AlarmList(),
-              AlarmList(),
+              FollowList(),
+              FollowList(),
             ],
           ),
         ),
