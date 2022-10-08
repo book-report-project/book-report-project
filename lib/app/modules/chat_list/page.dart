@@ -4,9 +4,9 @@ import 'package:faker/faker.dart';
 import 'package:get/route_manager.dart';
 import 'package:jiffy/jiffy.dart';
 
-import 'package:book_report_app/app/modules/chat/page.dart';
 import 'package:book_report_app/core/theme/theme.dart';
 import 'package:book_report_app/core/utils/utils.dart';
+import 'package:book_report_app/app/modules/chat/page.dart';
 import 'package:book_report_app/app/widgets/widgets.dart';
 import 'package:book_report_app/app/data/models/models.dart';
 
@@ -18,18 +18,22 @@ class ChatListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leadingWidth: 150,
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 25),
-          child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text('메시지',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Colors.black87,
-                  ))),
+        leading: GestureDetector(
+          onTap: () {
+            Get.back();
+          },
+          child: const Icon(
+            CupertinoIcons.back,
+            color: Colors.black,
+          ),
         ),
+        centerTitle: false,
+        title: const Text('메시지',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              color: Colors.black87,
+            )),
         actions: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),

@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 import 'package:book_report_app/app/widgets/widgets.dart';
 import 'package:book_report_app/core/theme/theme.dart';
@@ -19,17 +21,22 @@ class _TabBarState extends State<CommonTabBar> {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
-            leading: const Padding(
-              padding: EdgeInsets.only(left: 25),
-              child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text('알림',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                        color: Colors.black87,
-                      ))),
+            leading: GestureDetector(
+              onTap: () {
+                Get.back();
+              },
+              child: const Icon(
+                CupertinoIcons.back,
+                color: Colors.black,
+              ),
             ),
+            centerTitle: false,
+            title: const Text('알림',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.black87,
+                )),
             bottom: PreferredSize(
               preferredSize: const Size(00.0, 30.0),
               child: TabBar(

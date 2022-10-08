@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 import 'package:book_report_app/core/theme/theme.dart';
 import 'package:book_report_app/app/modules/follow/widgets/follow_list.dart';
-import 'package:get/route_manager.dart';
 
 class FollowTabBar extends StatefulWidget {
   const FollowTabBar({Key? key}) : super(key: key);
