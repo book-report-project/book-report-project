@@ -120,9 +120,9 @@ class FeedWidget extends StatelessWidget {
                     style: const TextStyle(
                         fontWeight: FontWeight.normal,
                         fontSize: 16,
+                        height: 1.6,
                         color: Colors.black87),
                   ),
-                  SizedBox(height: hideFollow ? 20 : 5),
                   !isDetail
                       ? GestureDetector(
                           onTap: () {
@@ -133,7 +133,7 @@ class FeedWidget extends StatelessWidget {
                             textAlign: TextAlign.left,
                             "더보기",
                             style: const TextStyle(
-                                fontSize: 15.0, color: Colors.black87),
+                                fontSize: 17.0, color: Colors.black87),
                           ),
                         )
                       : Container(),
