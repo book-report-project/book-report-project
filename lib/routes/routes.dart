@@ -9,4 +9,5 @@ abstract class Routes {
   static const chatList = '/chatList';
   static const reply = '/reply';
   static const user = '/user';
+  static const follow = '/follow';
 }
