@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:book_report_app/app/modules/user/widgets/feed_table.dart';
+import 'package:book_report_app/app/modules/user/widgets/user_list.dart';
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/app/widgets/widgets.dart';
@@ -18,6 +19,7 @@ class _UserScreenState extends State<UserScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         leadingWidth: 400,
@@ -95,11 +97,11 @@ Email: sxin294999@gamil.com
                           fontWeight: FontWeight.w200),
                     ),
                     CountingButtons(currentIndex: currentIndex),
-                    FeedTable(),
                   ],
                 ),
               ),
-            )
+            ),
+            currentIndex == 0 ? const FeedTable() : const UserList()
           ],
         ),
       )),

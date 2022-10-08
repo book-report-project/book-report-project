@@ -12,6 +12,8 @@ import 'package:book_report_app/app/modules/reply/binding.dart';
 import 'package:book_report_app/app/modules/reply/page.dart';
 import 'package:book_report_app/app/modules/user/binding.dart';
 import 'package:book_report_app/app/modules/user/page.dart';
+import 'package:book_report_app/app/modules/follow/binding.dart';
+import 'package:book_report_app/app/modules/follow/page.dart';
 
 part './routes.dart';
 
@@ -41,5 +43,10 @@ abstract class AppPages {
         name: Routes.user,
         page: () => const UserScreen(),
         bindings: [UserBinding()]),
+    GetPage(
+      name: Routes.user,
+      page: () => const FollowScreen(),
+      bindings: [FollowBinding()],
+    )
   ];
 }

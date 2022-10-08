@@ -9,19 +9,31 @@ class FeedTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: const [
-          SizedBox(height: 30),
-          FeedWidget(
+        children: [
+          Container(
+            height: 15,
+            color: Colors.black12,
+          ),
+          const SizedBox(height: 15),
+          const FeedWidget(
             isDetail: false,
             hideFollow: true,
           ),
-          SizedBox(height: 30),
-          FeedWidget(
+          Container(
+            height: 15,
+            color: Colors.black12,
+          ),
+          const SizedBox(height: 15),
+          const FeedWidget(
             isDetail: false,
             hideFollow: true,
           ),
-          SizedBox(height: 30),
-          FeedWidget(
+          Container(
+            height: 15,
+            color: Colors.black12,
+          ),
+          const SizedBox(height: 15),
+          const FeedWidget(
             isDetail: false,
             hideFollow: true,
           ),
