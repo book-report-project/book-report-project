@@ -16,6 +16,7 @@ class ChatListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: GestureDetector(
@@ -83,7 +84,7 @@ class _MessageTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.to(ChatScreen.route(messageData));
+        Get.to(() => ChatScreen(messageData: messageData));
       },
       child: Container(
         height: 100,
@@ -101,7 +102,7 @@ class _MessageTitle extends StatelessWidget {
           child: Row(
             children: [
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Avatar.medium(url: messageData.profilePicture),
               ),
               Expanded(
@@ -118,6 +119,7 @@ class _MessageTitle extends StatelessWidget {
                           letterSpacing: 0.2,
                           wordSpacing: 1.5,
                           fontWeight: FontWeight.w900,
+                          color: Colors.black,
                         ),
                       ),
                     ),
