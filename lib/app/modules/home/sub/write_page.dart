@@ -1,8 +1,10 @@
-import 'package:book_report_app/app/widgets/widgets.dart';
-import 'package:book_report_app/core/theme/theme.dart';
-import 'package:dotted_border/dotted_border.dart';
+import 'package:book_report_app/app/widgets/bottom_modals/write_done_modal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:dotted_border/dotted_border.dart';
+
+import 'package:book_report_app/app/widgets/widgets.dart';
+import 'package:book_report_app/core/theme/theme.dart';
 
 class WritePage extends StatefulWidget {
   const WritePage({Key? key}) : super(key: key);
@@ -101,33 +103,53 @@ class _BooksInputState extends State<_BooksInput> {
       child: Padding(
         padding: const EdgeInsets.only(top: 5.0),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            GestureDetector(
-                onTap: () {
-                  setState(() {
-                    widget.book = !widget.book;
-                  });
+            Row(
+              children: [
+                GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        widget.book = !widget.book;
+                      });
+                    },
+                    child: const _BookIcon(
+                        text: "책 추가", icon: CupertinoIcons.book_circle_fill)),
+                const SizedBox(width: 15),
+                GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        widget.pic = !widget.pic;
+                      });
+                    },
+                    child: const _BookIcon(
+                        text: "사진", icon: CupertinoIcons.camera_circle_fill)),
+                const SizedBox(width: 15),
+                GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        widget.link = !widget.link;
+                      });
+                    },
+                    child: const _BookIcon(
+                        text: "링크", icon: CupertinoIcons.link_circle_fill)),
+              ],
+            ),
+            OutlinedButton(
+                onPressed: () {
+                  showModalBottomSheet<void>(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      context: context,
+                      builder: (BuildContext context) {
+                        return const WriteDoneModal();
+                      });
                 },
-                child: const _BookIcon(
-                    text: "책 추가", icon: CupertinoIcons.book_circle_fill)),
-            const SizedBox(width: 15),
-            GestureDetector(
-                onTap: () {
-                  setState(() {
-                    widget.pic = !widget.pic;
-                  });
-                },
-                child: const _BookIcon(
-                    text: "사진", icon: CupertinoIcons.camera_circle_fill)),
-            const SizedBox(width: 15),
-            GestureDetector(
-                onTap: () {
-                  setState(() {
-                    widget.link = !widget.link;
-                  });
-                },
-                child: const _BookIcon(
-                    text: "링크", icon: CupertinoIcons.link_circle_fill)),
+                child: const Text(
+                  "작성 완료",
+                  style: TextStyle(fontSize: 13.0, color: Colors.black54),
+                )),
           ],
         ),
       ),
