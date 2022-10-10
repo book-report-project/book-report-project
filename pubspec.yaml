@@ -21,6 +21,7 @@ dependencies:
   get: ^4.6.1
   http: ^0.13.4
   get_storage: ^2.0.3
+  dotted_border: ^2.0.0+2
 
 dev_dependencies:
   flutter_test:

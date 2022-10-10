@@ -33,8 +33,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
   final List<Widget> _widgetOptions = [
     const FeedPage(),
     const SearchPage(),
-    const SettingPage(),
     const WritePage(),
+    const SettingPage(),
   ];
 
   @override
@@ -59,7 +59,6 @@ class _BottomNavigatorState extends State<BottomNavigator> {
                   icon: _BottomWidget(
                       label: "설정", icon: CupertinoIcons.ellipsis_circle)),
             ],
-            // indicatorColor: AppColors.secondary,
             indicatorColor: Colors.transparent,
             unselectedLabelColor: Colors.grey,
             labelColor: AppColors.secondary,
