@@ -34,7 +34,7 @@ class FeedWidget extends StatelessWidget {
                                 url:
                                     'https://avatars.githubusercontent.com/u/49556566?v=4'),
                             Padding(
-                              padding: const EdgeInsets.only(left: 12.0),
+                              padding: const EdgeInsets.only(left: 15.0),
                               child: SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.6,
                                 child: Align(
@@ -48,7 +48,8 @@ class FeedWidget extends StatelessWidget {
                                         '인철',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 12,
+                                          fontSize: 14,
+                                          color: Colors.black,
                                         ),
                                       ),
                                       SizedBox(height: 2),
@@ -56,17 +57,17 @@ class FeedWidget extends StatelessWidget {
                                         '안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀 ...',
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
-                                          fontWeight: FontWeight.normal,
-                                          fontSize: 10,
-                                        ),
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 11,
+                                            color: Colors.black87),
                                       ),
                                       SizedBox(height: 2),
                                       Text(
                                         '3 일전',
                                         style: TextStyle(
-                                          fontWeight: FontWeight.normal,
-                                          fontSize: 10,
-                                        ),
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 10,
+                                            color: Colors.black26),
                                       ),
                                     ],
                                   ),
@@ -76,6 +77,8 @@ class FeedWidget extends StatelessWidget {
                           ],
                         ),
                         OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                                backgroundColor: Colors.white),
                             onPressed: () {
                               showModalBottomSheet<void>(
                                   shape: RoundedRectangleBorder(
