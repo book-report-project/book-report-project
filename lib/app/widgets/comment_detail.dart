@@ -63,17 +63,17 @@ class _CommentData extends StatelessWidget {
                                     const Text(
                                       '인철',
                                       style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 12,
-                                      ),
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 14,
+                                          color: Colors.black),
                                     ),
                                     const SizedBox(width: 10),
                                     const Text(
                                       '3 일전',
                                       style: TextStyle(
-                                        fontWeight: FontWeight.normal,
-                                        fontSize: 10,
-                                      ),
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 10,
+                                          color: Colors.black87),
                                     ),
                                   ],
                                 ),
@@ -83,9 +83,10 @@ class _CommentData extends StatelessWidget {
                             const Text(
                               '안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀',
                               style: TextStyle(
-                                fontWeight: FontWeight.normal,
-                                fontSize: 10,
-                              ),
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 10,
+                                  height: 1.3,
+                                  color: Colors.black87),
                             ),
                             const SizedBox(height: 10),
                             Row(

@@ -66,17 +66,17 @@ class _CommentData extends StatelessWidget {
                                     const Text(
                                       '인철',
                                       style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 12,
-                                      ),
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 12,
+                                          color: Colors.black),
                                     ),
                                     const SizedBox(width: 10),
                                     const Text(
                                       '3 일전',
                                       style: TextStyle(
-                                        fontWeight: FontWeight.normal,
-                                        fontSize: 10,
-                                      ),
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 10,
+                                          color: Colors.black54),
                                     ),
                                   ],
                                 ),
@@ -90,9 +90,9 @@ class _CommentData extends StatelessWidget {
                             const Text(
                               '안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀',
                               style: TextStyle(
-                                fontWeight: FontWeight.normal,
-                                fontSize: 10,
-                              ),
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 10,
+                                  color: Colors.black45),
                             ),
                             const SizedBox(height: 10),
                             Row(
@@ -105,7 +105,7 @@ class _CommentData extends StatelessWidget {
                                   child: const Text(
                                     '댓글 7개',
                                     style: TextStyle(
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.bold,
                                         fontSize: 12,
                                         color: AppColors.textHighlight),
                                   ),

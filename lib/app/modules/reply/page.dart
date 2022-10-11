@@ -9,6 +9,7 @@ class ReplyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           iconTheme: Theme.of(context).iconTheme,
           centerTitle: false,
@@ -23,7 +24,8 @@ class ReplyScreen extends StatelessWidget {
                   Navigator.of(context).pop();
                 }),
           ),
-          title: const Text('인철님의 댓글', style: TextStyle(fontSize: 14.0)),
+          title: const Text('인철님의 댓글',
+              style: TextStyle(fontSize: 14.0, color: Colors.black)),
           actions: [
             Padding(
               padding: const EdgeInsets.only(right: 20),
@@ -101,17 +103,17 @@ class _ReplyData extends StatelessWidget {
                                     const Text(
                                       '인철',
                                       style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 12,
-                                      ),
+                                          fontWeight: FontWeight.w900,
+                                          fontSize: 13,
+                                          color: Colors.black),
                                     ),
                                     const SizedBox(width: 10),
                                     const Text(
                                       '3 일전',
                                       style: TextStyle(
-                                        fontWeight: FontWeight.normal,
-                                        fontSize: 10,
-                                      ),
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 10,
+                                          color: Colors.black),
                                     ),
                                   ],
                                 ),
@@ -119,11 +121,12 @@ class _ReplyData extends StatelessWidget {
                             ),
                             const SizedBox(height: 10),
                             const Text(
-                              '안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀',
+                              '안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀',
                               style: TextStyle(
-                                fontWeight: FontWeight.normal,
-                                fontSize: 10,
-                              ),
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 10,
+                                  height: 1.5,
+                                  color: Colors.black54),
                             ),
                           ],
                         ),

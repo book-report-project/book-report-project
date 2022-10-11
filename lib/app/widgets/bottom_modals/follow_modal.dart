@@ -35,7 +35,10 @@ class FollowModal extends StatelessWidget {
               const SizedBox(height: 10),
               const Text(
                 "인철 님을 팔로우 하시겠습니까?",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15.0,
+                    color: Colors.black),
               ),
               Padding(
                 // Header
@@ -67,17 +70,17 @@ class FollowModal extends StatelessWidget {
                                           const Text(
                                             '인철',
                                             style: TextStyle(
-                                              fontWeight: FontWeight.w900,
-                                              fontSize: 16,
-                                            ),
+                                                fontWeight: FontWeight.w900,
+                                                fontSize: 16,
+                                                color: Colors.black87),
                                           ),
                                           const SizedBox(width: 10),
                                           const Text(
                                             '',
                                             style: TextStyle(
-                                              fontWeight: FontWeight.normal,
-                                              fontSize: 14,
-                                            ),
+                                                fontWeight: FontWeight.normal,
+                                                fontSize: 14,
+                                                color: Colors.black54),
                                           ),
                                         ],
                                       ),
@@ -87,9 +90,9 @@ class FollowModal extends StatelessWidget {
                                   const Text(
                                     '안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀안녕하세요 어쩌구저쩌꾸 삐리빠라빠리뽀',
                                     style: TextStyle(
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 12,
-                                    ),
+                                        fontWeight: FontWeight.normal,
+                                        fontSize: 12,
+                                        color: Colors.black87),
                                   ),
                                 ],
                               ),
