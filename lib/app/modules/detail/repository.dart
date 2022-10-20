@@ -5,7 +5,5 @@ class DetailRepository {
 
   DetailRepository(this.api);
 
-  // getCats() => api.getCats();
-  // getDogs() => api.getDogs();
-  // getAll() => api.getAll();
+  getFeeds() => api.getFeeds();
 }
