@@ -1,16 +1,13 @@
+import 'package:book_report_app/app/modules/detail/controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/app/widgets/widgets.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 
-class DetailScreen extends StatefulWidget {
+class DetailScreen extends GetView<DetailController> {
   const DetailScreen({Key? key}) : super(key: key);
 
-  @override
-  _DetailScreenState createState() => _DetailScreenState();
-}
-
-class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

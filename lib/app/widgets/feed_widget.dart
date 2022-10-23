@@ -129,7 +129,7 @@ class FeedWidget extends StatelessWidget {
                   !isDetail
                       ? GestureDetector(
                           onTap: () {
-                            Get.to(const DetailScreen(),
+                            Get.to(DetailScreen(),
                                 transition: Transition.cupertino);
                           },
                           child: Text(

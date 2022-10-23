@@ -10,4 +10,5 @@ abstract class Routes {
   static const reply = '/reply';
   static const user = '/user';
   static const follow = '/follow';
+  static const example = '/example';
 }
