@@ -45,7 +45,7 @@ class _CommentFeedState extends State<CommentFeed> {
             ),
             GestureDetector(
               onTap: () {
-                Get.to(const DetailScreen(), transition: Transition.cupertino);
+                Get.to(DetailScreen(), transition: Transition.cupertino);
               },
               child: const Text(
                 '댓글 더보기',
