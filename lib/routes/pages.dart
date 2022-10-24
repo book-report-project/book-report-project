@@ -1,5 +1,3 @@
-import 'package:book_report_app/app/modules/example/binding.dart';
-import 'package:book_report_app/app/modules/example/page.dart';
 import 'package:get/get.dart';
 
 import 'package:book_report_app/app/modules/home/binding.dart';
@@ -27,7 +25,7 @@ abstract class AppPages {
         bindings: [HomeBinding()]),
     GetPage(
         name: Routes.detail,
-        page: () => DetailScreen(),
+        page: () => const DetailScreen(),
         bindings: [DetailBinding()]),
     GetPage(
         name: Routes.notification,
@@ -49,11 +47,6 @@ abstract class AppPages {
       name: Routes.user,
       page: () => const FollowScreen(),
       bindings: [FollowBinding()],
-    ),
-    GetPage(
-      name: Routes.example,
-      page: () => const AnimalDetailsPage(),
-      bindings: [AnimalDetailsBinding()],
     ),
   ];
 }
