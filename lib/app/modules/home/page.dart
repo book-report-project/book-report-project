@@ -1,4 +1,5 @@
 import 'dart:io' show Platform;
+import 'package:book_report_app/app/modules/home/controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,28 +9,17 @@ import 'package:book_report_app/app/modules/home/sub/feed_page.dart';
 import 'package:book_report_app/app/modules/home/sub/search_page.dart';
 import 'package:book_report_app/app/modules/home/sub/setting_page.dart';
 import 'package:book_report_app/app/modules/home/sub/write_page.dart';
+import 'package:get/get.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends GetView<HomeController> {
   const HomeScreen({Key? key}) : super(key: key);
   @override
-  HomeState createState() => HomeState();
-}
-
-class HomeState extends State<HomeScreen> {
-  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: BottomNavigator());
+    return MaterialApp(home: controller.obx((state) => BottomNavigator()));
   }
 }
 
-class BottomNavigator extends StatefulWidget {
-  const BottomNavigator({Key? key}) : super(key: key);
-
-  @override
-  State<BottomNavigator> createState() => _BottomNavigatorState();
-}
-
-class _BottomNavigatorState extends State<BottomNavigator> {
+class BottomNavigator extends GetView<HomeController> {
   final List<Widget> _widgetOptions = [
     const FeedPage(),
     const SearchPage(),
@@ -37,8 +27,11 @@ class _BottomNavigatorState extends State<BottomNavigator> {
     const SettingPage(),
   ];
 
+  BottomNavigator({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    print(controller.state);
     return DefaultTabController(
       initialIndex: 0,
       length: 4,
