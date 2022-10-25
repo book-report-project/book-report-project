@@ -1,43 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:book_report_app/core/theme/theme.dart';
 import 'package:book_report_app/app/widgets/feed_widget.dart';
 import 'package:book_report_app/app/widgets/hr.dart';
 import 'package:book_report_app/app/modules/home/widgets/stories.dart';
+import 'package:book_report_app/app/modules/home/controller.dart';
 
-class FeedPage extends StatefulWidget {
+class FeedPage extends GetView<HomeController> {
   const FeedPage({Key? key}) : super(key: key);
 
-  @override
-  FeedPageState createState() => FeedPageState();
-}
-
-class FeedPageState extends State<FeedPage> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         children: [
           _pleaseWriteBookReport(context),
-          const Stories(),
+          GestureDetector(child: const Stories()),
           const SizedBox(height: 30),
-          // const RecommandFollowing()
-          Column(
-            children: const [
-              Hr(),
-              FeedWidget(isDetail: false),
-              Hr(),
-              FeedWidget(isDetail: false),
-              Hr(),
-              FeedWidget(isDetail: false),
-              Hr(),
-              FeedWidget(isDetail: false),
-            ],
-          ),
+          controller.obx(((state) => _feedList(context))),
         ],
       ),
     );
   }
+}
+
+Widget _feedList(BuildContext context) {
+  return Column(
+    children: [
+      const Hr(),
+      const FeedWidget(isDetail: false),
+      const Hr(),
+      const FeedWidget(isDetail: false),
+      const Hr(),
+      const FeedWidget(isDetail: false),
+      const Hr(),
+      const FeedWidget(isDetail: false),
+    ],
+  );
 }
 
 Widget _pleaseWriteBookReport(BuildContext context) {

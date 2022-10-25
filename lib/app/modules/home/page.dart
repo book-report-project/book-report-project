@@ -3,12 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:book_report_app/app/widgets/widgets.dart';
+import 'package:book_report_app/app/modules/home/sub/feed_page.dart';
 import 'package:book_report_app/app/modules/home/sub/search_page.dart';
-import 'package:book_report_app/app/modules/home/sub/setting_page.dart';
 import 'package:book_report_app/app/modules/home/sub/write_page.dart';
+import 'package:book_report_app/app/modules/home/sub/setting_page.dart';
 import 'package:book_report_app/core/theme/theme.dart';
-
-import 'package:book_report_app/app/modules/pages/feed/page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
