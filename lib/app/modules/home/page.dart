@@ -1,25 +1,24 @@
 import 'dart:io' show Platform;
-import 'package:book_report_app/app/modules/home/controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:book_report_app/core/theme/theme.dart';
 import 'package:book_report_app/app/widgets/widgets.dart';
-import 'package:book_report_app/app/modules/home/sub/feed_page.dart';
 import 'package:book_report_app/app/modules/home/sub/search_page.dart';
 import 'package:book_report_app/app/modules/home/sub/setting_page.dart';
 import 'package:book_report_app/app/modules/home/sub/write_page.dart';
-import 'package:get/get.dart';
+import 'package:book_report_app/core/theme/theme.dart';
 
-class HomeScreen extends GetView<HomeController> {
+import 'package:book_report_app/app/modules/pages/feed/page.dart';
+
+class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: controller.obx((state) => BottomNavigator()));
+    return MaterialApp(home: BottomNavigator());
   }
 }
 
-class BottomNavigator extends GetView<HomeController> {
+class BottomNavigator extends StatelessWidget {
   final List<Widget> _widgetOptions = [
     const FeedPage(),
     const SearchPage(),
@@ -31,7 +30,6 @@ class BottomNavigator extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    print(controller.state);
     return DefaultTabController(
       initialIndex: 0,
       length: 4,
