@@ -18,7 +18,7 @@ void main() async {
     getPages: AppPages.pages,
     theme: AppTheme.light(),
     darkTheme: AppTheme.dark(),
-    themeMode: ThemeMode.dark,
+    themeMode: ThemeMode.light,
     debugShowCheckedModeBanner: false,
   ));
 }
