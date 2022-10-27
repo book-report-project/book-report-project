@@ -1,7 +1,11 @@
+// To parse this JSON data, do
+//
+//     final welcome = welcomeFromJson(jsonString);
+
 import 'dart:convert';
 
-List<Feed> feedFromJson(String str) =>
-    List<Feed>.from(json.decode(str).map((x) => Feed.fromJson(x)));
+List<Feed> feedFromJson(str) =>
+    List<Feed>.from(str.map((x) => Feed.fromJson(x)));
 
 String feedToJson(List<Feed> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -15,9 +19,7 @@ class Feed {
     required this.createdAt,
     required this.updatedAt,
     this.deletedAt,
-  }) {
-    throw UnimplementedError();
-  }
+  });
 
   int no;
   String title;

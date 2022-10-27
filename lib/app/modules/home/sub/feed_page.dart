@@ -27,15 +27,15 @@ class FeedPage extends GetView<HomeController> {
 
 Widget _feedList(BuildContext context) {
   return Column(
-    children: [
-      const Hr(),
-      const FeedWidget(isDetail: false),
-      const Hr(),
-      const FeedWidget(isDetail: false),
-      const Hr(),
-      const FeedWidget(isDetail: false),
-      const Hr(),
-      const FeedWidget(isDetail: false),
+    children: const [
+      Hr(),
+      FeedWidget(isDetail: false),
+      Hr(),
+      FeedWidget(isDetail: false),
+      Hr(),
+      FeedWidget(isDetail: false),
+      Hr(),
+      FeedWidget(isDetail: false),
     ],
   );
 }
