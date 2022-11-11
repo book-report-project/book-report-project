@@ -18,26 +18,28 @@ class FeedPage extends GetView<HomeController> {
           _pleaseWriteBookReport(context),
           GestureDetector(child: const Stories()),
           const SizedBox(height: 30),
-          controller.obx(((state) => _feedList(context))),
+          controller.obx(((state) => _FeedListWidget())),
         ],
       ),
     );
   }
 }
 
-Widget _feedList(BuildContext context) {
-  return Column(
-    children: const [
-      Hr(),
-      FeedWidget(isDetail: false),
-      Hr(),
-      FeedWidget(isDetail: false),
-      Hr(),
-      FeedWidget(isDetail: false),
-      Hr(),
-      FeedWidget(isDetail: false),
-    ],
-  );
+class _FeedListWidget extends GetView<HomeController> {
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+        shrinkWrap: true,
+        itemCount: controller.state.length,
+        itemBuilder: (BuildContext ctx, int idx) {
+          return Column(
+            children: const [
+              Hr(),
+              FeedWidget(isDetail: false),
+            ],
+          );
+        });
+  }
 }
 
 Widget _pleaseWriteBookReport(BuildContext context) {
