@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:book_report_app/app/modules/login/binding.dart';
+import 'package:book_report_app/app/modules/login/page.dart';
 import 'package:book_report_app/app/modules/home/binding.dart';
 import 'package:book_report_app/app/modules/home/page.dart';
 import 'package:book_report_app/app/modules/detail/binding.dart';
@@ -19,6 +21,10 @@ part './routes.dart';
 
 abstract class AppPages {
   static final pages = [
+    GetPage(
+        name: Routes.login,
+        page: () => const LoginScreen(),
+        bindings: [LoginBinding()]),
     GetPage(
         name: Routes.home,
         page: () => const HomeScreen(),
