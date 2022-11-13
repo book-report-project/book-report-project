@@ -31,6 +31,7 @@ class _FeedListWidget extends GetView<HomeController> {
     return ListView.builder(
         shrinkWrap: true,
         itemCount: controller.state.length,
+        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (BuildContext ctx, int idx) {
           return Column(
             children: const [
