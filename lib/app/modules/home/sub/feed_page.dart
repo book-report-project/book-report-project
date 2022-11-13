@@ -13,6 +13,7 @@ class FeedPage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      key: const PageStorageKey('feed_page'),
       child: Column(
         children: [
           _pleaseWriteBookReport(context),
