@@ -18,12 +18,12 @@ class HomeController extends GetxController with StateMixin {
   }
 
   getFeed() async {
-    final _ = await repository.getFeeds();
-    if (verifyresponse(_)) {
-      change(_, status: RxStatus.error(_.message));
-      return Get.snackbar('Erro', _.message);
+    final response = await repository.getFeeds();
+    if (verifyresponse(response)) {
+      change(response, status: RxStatus.error(response.message));
+      return Get.snackbar('Erro', response.message);
     } else {
-      change(_, status: RxStatus.success());
+      change(response, status: RxStatus.success());
     }
   }
 }
