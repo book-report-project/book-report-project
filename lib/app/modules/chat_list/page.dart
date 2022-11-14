@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:faker/faker.dart';
-import 'package:get/route_manager.dart';
+import 'package:get/get.dart';
 import 'package:jiffy/jiffy.dart';
 
 import 'package:book_report_app/core/theme/theme.dart';
@@ -9,8 +9,9 @@ import 'package:book_report_app/core/utils/utils.dart';
 import 'package:book_report_app/app/modules/chat/page.dart';
 import 'package:book_report_app/app/widgets/widgets.dart';
 import 'package:book_report_app/app/data/models/models.dart';
+import 'package:book_report_app/app/modules/chat_list/controller.dart';
 
-class ChatListScreen extends StatelessWidget {
+class ChatListScreen extends GetView<ChatListController> {
   const ChatListScreen({Key? key}) : super(key: key);
 
   @override
@@ -29,7 +30,7 @@ class ChatListScreen extends StatelessWidget {
           ),
         ),
         centerTitle: false,
-        title: const Text('메시지',
+        title: const Text("메시지",
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16,
