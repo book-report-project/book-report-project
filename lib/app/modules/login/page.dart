@@ -1,6 +1,8 @@
-import 'package:book_report_app/app/modules/home/page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+
+import 'package:book_report_app/app/modules/home/binding.dart';
+import 'package:book_report_app/app/modules/home/page.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -89,7 +91,8 @@ Widget _loginJon(context) {
 Widget _googleLoginButton(context) {
   return GestureDetector(
     onTap: () {
-      Get.to(const HomeScreen(), transition: Transition.cupertino);
+      Get.to(const HomeScreen(),
+          transition: Transition.cupertino, binding: HomeBinding());
     },
     child: Container(
       decoration: BoxDecoration(

@@ -1,3 +1,4 @@
+import 'package:book_report_app/app/modules/chat_list/binding.dart';
 import 'package:get/route_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +45,8 @@ class AppBarWidgetState extends State<AppBarWidget> {
                 icon: CupertinoIcons.mail,
                 onTap: () {
                   Get.to(const ChatListScreen(),
-                      transition: Transition.downToUp);
+                      transition: Transition.downToUp,
+                      binding: ChatListBinding());
                 }),
           ),
         ),

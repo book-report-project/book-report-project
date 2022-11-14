@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "47176151930",
+    "project_id": "ollious",
+    "storage_bucket": "ollious.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47176151930:android:eb41c988e62f724c979cc3",
+        "android_client_info": {
+          "package_name": "com.inch.ollious"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47176151930-tjk5bqjj4h14epgs82s7hqj73a3d0jnt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoCWlmPM_-INu3cLG8ZQWOIKyGthYa-YU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47176151930-tjk5bqjj4h14epgs82s7hqj73a3d0jnt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

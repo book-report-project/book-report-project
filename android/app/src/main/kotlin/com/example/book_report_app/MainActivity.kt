@@ -1,4 +1,4 @@
-package com.example.book_report_app
+package com.inch.ollious
 
 import io.flutter.embedding.android.FlutterActivity
 
