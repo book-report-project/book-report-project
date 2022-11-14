@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAqmWJa2swblNEnrL-wAwMtpXbPHewnMz0',
-    appId: '1:311166096404:android:9771a1cf7d1a77632dc301',
-    messagingSenderId: '311166096404',
-    projectId: 'book-report-3846c',
-    storageBucket: 'book-report-3846c.appspot.com',
+    apiKey: 'AIzaSyBoCWlmPM_-INu3cLG8ZQWOIKyGthYa-YU',
+    appId: '1:47176151930:android:eb41c988e62f724c979cc3',
+    messagingSenderId: '47176151930',
+    projectId: 'ollious',
+    storageBucket: 'ollious.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDuak3iY7Pw2CePHoDCYig6qR2Im5A5PGw',
-    appId: '1:311166096404:ios:b14a35565c833b7c2dc301',
-    messagingSenderId: '311166096404',
-    projectId: 'book-report-3846c',
-    storageBucket: 'book-report-3846c.appspot.com',
-    iosClientId: '311166096404-non0bjgc9vi82r96f6mnh008qs9vcn68.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCAH3e2_JWnDTFklzrNaKQi_j8jJwmOSRI',
+    appId: '1:47176151930:ios:434f451c96f16e8c979cc3',
+    messagingSenderId: '47176151930',
+    projectId: 'ollious',
+    storageBucket: 'ollious.appspot.com',
+    iosClientId: '47176151930-p1dojhl0f3psuvrarj8ssidudt8i7hcg.apps.googleusercontent.com',
     iosBundleId: 'com.inch.ollious',
   );
 }
